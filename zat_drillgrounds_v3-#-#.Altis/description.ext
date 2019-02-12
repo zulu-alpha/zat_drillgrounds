@@ -54,9 +54,10 @@ class CfgRemoteExec
 
 class Extended_PreInit_EventHandlers {
     // VCOMAI 3
-	VCM_CBASettings = call compile preprocessFileLineNumbers "Vcom\Functions\VCM_CBASettings.sqf";
+	class VCM_CBASettings {
+		init = "call VCM_fnc_CBA_Settings";
+	};
 };
-
 // ZAMF specific parts of the description.ext
 #include "zamf\zamf_description.hpp"
 

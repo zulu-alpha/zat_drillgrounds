@@ -82,9 +82,9 @@ private _manikin_add_wound = {
 
 	[
 		_manikin, 
-		(0.2 + random 0.6),
+		(0.5 + random 0.5),
 		selectRandom ["head", "body", "hand_l", "hand_l", "hand_r", "leg_l", "leg_r"],
-		selectRandom ["bullet", "grenade", "explosive", "shell", "vehiclecrash", "backblast", "stab", "punch", "falling", "unknown"]
+		selectRandom ["bullet", "grenade", "explosive", "shell", "vehiclecrash", "backblast", "stab", "punch", "falling"]
 	] call ace_medical_fnc_addDamageToUnit;
 
 };
