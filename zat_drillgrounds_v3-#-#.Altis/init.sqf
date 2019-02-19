@@ -23,3 +23,15 @@
 call compile preprocessfilelinenumbers "gunnery_range\gun_init.sqf";
 // All players spectate while unconscious due to ACE medical
 [] execVM "spect_uncon.sqf";
+
+// ZARTY
+[] spawn {
+	if (hasInterface) then {
+		waitUntil {sleep 0.1; (time > 5) and !(isNull player)};
+		[] execVM "module_chatIntercept\init.sqf";
+	};
+};
+ARTY_MAG = "32Rnd_155mm_Mo_shells";
+ARTY = blu_arty;
+ARTY_CALLSIGN = "Haymaker";
+ARTY_ERROR_RADIUS = 150;

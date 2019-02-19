@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=11520;
+		nextID=11525;
 	};
 	class LayerIndexProvider
 	{
-		nextID=109;
+		nextID=115;
 	};
 	class Camera
 	{
-		pos[]={21860.205,21.035057,18114.549};
-		dir[]={-0.67348969,-0.53510243,-0.5100497};
-		up[]={-0.42659077,0.84477717,-0.32306644};
-		aside[]={-0.60375816,-9.3132257e-009,0.79722208};
+		pos[]={26795.756,53.734692,24580.994};
+		dir[]={-0.58617455,-0.30588415,0.75024837};
+		up[]={-0.18833163,0.9520641,0.24104714};
+		aside[]={0.78801328,5.9785089e-007,0.61568302};
 	};
 };
 binarizationWanted=0;
@@ -137,13 +137,14 @@ addons[]=
 	"A3_Structures_F_Households_House_Small02",
 	"A3_Characters_F_Exp_Civil",
 	"A3_Structures_F_Orange_Humanitarian_Camps",
-	"A3_Structures_F_Mark_Items_Sport"
+	"A3_Armor_F_Gamma_MBT_01",
+	"acre_sys_intercom"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=70;
+		items=72;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -604,6 +605,20 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item70
+		{
+			className="A3_Armor_F_Gamma";
+			name="Arma 3 - Armored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item71
+		{
+			className="acre_sys_intercom";
+			name="ACRE2 - Vehicle Intercom";
+			author="ACRE2Team";
+			url="https://github.com/IDI-Systems/acre2";
+		};
 	};
 };
 randomSeed=2624700;
@@ -642,7 +657,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="zat_Drill Grounds_v3.0.2";
+		briefingName="zat_Drill Grounds_v3.1.0";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
@@ -664,7 +679,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=3255;
+		items=3256;
 		class Item0
 		{
 			dataType="Marker";
@@ -2716,7 +2731,7 @@ class Mission
 			text="Aircraft";
 			type="respawn_plane";
 			colorName="ColorWEST";
-			angle=127.68766;
+			angle=127.68764;
 			id=362;
 			atlOffset=9.5367432e-006;
 		};
@@ -2769,7 +2784,7 @@ class Mission
 			text="Armored";
 			type="respawn_armor";
 			colorName="ColorWEST";
-			angle=308.70068;
+			angle=308.70059;
 			id=364;
 			atlOffset=-0.00027656555;
 		};
@@ -2781,7 +2796,7 @@ class Mission
 			text="Cars";
 			type="respawn_armor";
 			colorName="ColorWEST";
-			angle=307.24905;
+			angle=307.24896;
 			id=365;
 			atlOffset=0.00010871887;
 		};
@@ -142389,20 +142404,156 @@ class Mission
 		};
 		class Item3254
 		{
-			dataType="Object";
-			class PositionInfo
+			dataType="Group";
+			side="West";
+			class Entities
 			{
-				position[]={21855.547,17.35931,18111.932};
-				angles[]={0.0066682254,0,6.2698536};
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26632.893,11.186631,24777.58};
+						angles[]={0.0053377044,3.9213915,0.081154868};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						name="blu_artyD";
+					};
+					id=11522;
+					type="B_crew_F";
+					atlOffset=-9.5367432e-007;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26632.893,11.186631,24777.58};
+						angles[]={0.0053377044,3.9213915,0.081154868};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						name="blu_artyG";
+					};
+					id=11523;
+					type="B_crew_F";
+					atlOffset=-9.5367432e-007;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26632.893,11.186631,24777.58};
+						angles[]={0.0053377044,3.9213915,0.081154868};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						name="blu_artyC";
+					};
+					id=11524;
+					type="B_crew_F";
+					atlOffset=-9.5367432e-007;
+				};
 			};
-			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
-			id=11518;
-			type="Land_Balloon_01_air_F";
-			atlOffset=9.5367432e-006;
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=11522;
+						item1=11521;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=11523;
+						item1=11521;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=11524;
+						item1=11521;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0,0};
+						};
+					};
+				};
+			};
+			id=11520;
+			atlOffset=-0.0020895004;
+		};
+		class Item3255
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={26632.736,14.264161,24777.48};
+				angles[]={0.0053377044,3.9213915,0.081154868};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+				init="call{if (local this) then {  " \n "    this addEventHandler [  " \n "        ""Fired"",  " \n "        {  " \n "            nul = _this spawn {  " \n "                (_this select 0) setVehicleAmmo 1  " \n "            }  " \n "        }  " \n "    ]  " \n "};}";
+				name="blu_arty";
+			};
+			id=11521;
+			type="B_MBT_01_arty_F";
+			atlOffset=-0.0020895004;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""arifle_MXC_F"",""FirstAidKit""],[2,10]],[[""SmokeShell"",""SmokeShellBlue"",""30Rnd_65x39_caseless_mag""],[2,2,4]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
