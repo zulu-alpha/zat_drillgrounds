@@ -117,5 +117,13 @@ class shootHouse
         {
             description = "Create addaction options for enabling, disabling, or viewing scores of Paintball mode.";
         }
+        class paintbal_addEH
+        {
+            description = "Add the eventhandler to make hinting and scoring work."
+        }
+        class paintbal_removeEH
+        {
+            description = "Remove the eventhandler that made hinting and scoring work."
+        }
     };
 };

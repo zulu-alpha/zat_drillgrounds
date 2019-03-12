@@ -21,11 +21,7 @@ private _participants = _course getVariable ["shoothouse_paintballers", []];
 if (_participant in _participants) then {
 	_participants = _participants - [_participant];
 	_course setVariable ["shoothouse_paintballers", _participants, true];
-
-	private _eh_id = _participant getVariable ["shoothouse_paintball_eh_id"];
-	_participant removeEventHandler ["HitPart", _eh_id];
-	_participant setVariable ["shoothouse_paintball_eh_id", nil, true];
-
+    [_participant] remoteExec ["shootHouse_fnc_paintball_removeEH", 0, false];
     hint "You are no longer a paintball mode participant!";
 } else {
     hint "You where not a paintball mode participant!";

@@ -12,14 +12,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=121;
+		nextID=127;
 	};
 	class Camera
 	{
-		pos[]={27178.627,80.196503,25272.9};
-		dir[]={-0.30865023,-0.4950836,-0.8123219};
-		up[]={-0.1758651,0.8687706,-0.46285501};
-		aside[]={-0.93487442,-9.2480332e-007,0.35522589};
+		pos[]={26681.936,245.49658,24382.639};
+		dir[]={0.37240714,-0.64262509,0.66976953};
+		up[]={0.31229433,0.76611853,0.56166202};
+		aside[]={0.87405831,8.882198e-007,-0.48600754};
 	};
 };
 binarizationWanted=0;
@@ -2789,7 +2789,7 @@ class Mission
 			text="Cars";
 			type="respawn_armor";
 			colorName="ColorWEST";
-			angle=307.2489;
+			angle=307.24887;
 			id=365;
 			atlOffset=0.00010871887;
 		};
@@ -13118,6 +13118,7 @@ class Mission
 			};
 			id=3702;
 			type="RoadCone_L_F";
+			atlOffset=-0.0064870119;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -141723,12 +141724,14 @@ class Mission
 					};
 					id=11603;
 					type="O_G_Soldier_AR_F";
+					atlOffset=0.1778574;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=11602;
+			atlOffset=0.1778574;
 		};
 		class Item3221
 		{
@@ -142646,6 +142649,7 @@ class Mission
 					};
 					id=11643;
 					type="O_G_Soldier_lite_F";
+					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -142694,6 +142698,7 @@ class Mission
 			{
 			};
 			id=11642;
+			atlOffset=9.5367432e-007;
 		};
 		class Item3235
 		{
