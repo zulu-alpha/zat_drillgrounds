@@ -49,6 +49,11 @@ private _target_group = createGroup _side;
 
 } forEach _group_array;
 
+// VCOM
+{
+    _target_group setVariable [_x, true];
+} forEach ["VCM_NOFLANK", "VCM_NORESCUE", "VCM_TOUGHSQUAD"];
+
 
 // Register group with server. Use thread in order to ensure that registration is successfull
 // Also exit with warning after 5 tries
