@@ -17,6 +17,7 @@ class CfgFunctions
 	#include "zamf\zamf_cfgfunctions.hpp"
 	#include "VVS\Functions.h"
 	#include "shoothouse\cfgfunctions.hpp"
+    #include "ground_control\cfgfunctions.hpp"
     // VCOMAI 3
     #include "vcom\cfgFunctions.hpp"
     // ZARTY
