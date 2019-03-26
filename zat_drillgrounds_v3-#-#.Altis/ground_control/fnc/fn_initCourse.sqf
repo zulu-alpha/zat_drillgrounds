@@ -24,11 +24,9 @@ if (isServer) then {
 	_course setVariable ["groundControl_enemyGroups", [], false];
 	_course setVariable ["groundControl_enemyDefenderRatio", 0.5, false];
 	_course setVariable ["groundControl_enemyAttackerRatio", 1, false];
-	_course setVariable ["groundControl_enemyAttackInterval", 10, false];
+	_course setVariable ["groundControl_enemyAttackInterval", 300, false];
 };
 
 if (hasInterface) then {
 	[_course, []] call groundControl_fnc_createMenu;
 };
-
-
