@@ -1,0 +1,1 @@
+_this addAction[("<t color=""#fadfbe"">" + ("Set wind") + "</t>"),"wind\first_strength.sqf"];

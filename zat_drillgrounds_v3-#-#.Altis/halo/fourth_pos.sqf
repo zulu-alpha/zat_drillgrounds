@@ -27,4 +27,4 @@ waitUntil{!haloed};
 onMapSingleClick "";
 
 sleep 5;
-_pole execVM "halo\halo_init.sqf";
+_pole execVM "halo\init.sqf";

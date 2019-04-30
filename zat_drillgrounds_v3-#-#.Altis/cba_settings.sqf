@@ -198,7 +198,7 @@ force ace_viewdistance_limitViewDistance = 12000;
 force ace_laserpointer_enabled = true;
 
 // ACE Weather
-force ace_weather_enabled = true;
+force ace_weather_enabled = false;  // Modified
 force ace_weather_updateInterval = 60;
 force ace_weather_windSimulation = false;
 
