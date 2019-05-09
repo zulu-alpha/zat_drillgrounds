@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=263;
+		nextID=271;
 	};
 	class Camera
 	{
-		pos[]={26797.119,58.102509,24578.342};
-		dir[]={-0.22116061,-0.62127328,0.75178915};
-		up[]={-0.17533666,0.78358781,0.59601957};
-		aside[]={0.95938402,-1.4482066e-007,0.28223014};
+		pos[]={26799.992,46.697922,24605.5};
+		dir[]={-0.26602587,-0.56739873,0.77933949};
+		up[]={-0.18329786,0.82343477,0.53698164};
+		aside[]={0.94641829,-2.8219074e-007,0.32305774};
 	};
 };
 binarizationWanted=0;
@@ -147965,16 +147965,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={26796.088,25.514387,24641.467};
+				position[]={26796.088,25.514385,24641.467};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="call{nul = this execVM ""halo\init.sqf""}";
+				init="call{nul = [this] execVM ""jump\init.sqf""}";
 			};
 			id=13349;
 			type="Flag_White_F";
+			atlOffset=-1.9073486e-006;
 		};
 		class Item3329
 		{
