@@ -22,6 +22,8 @@ class CfgFunctions
     #include "vcom\cfgFunctions.hpp"
     // ZARTY
     #include "zarty\cfgFunctions.hpp"
+    // Wind
+    #include "wind\cfgFunctions.hpp"
 };
 
 // Enabling remote execution: https://community.bistudio.com/wiki/CfgRemoteExec
@@ -46,7 +48,8 @@ class CfgRemoteExec
         class zarty_fnc_executeFM { allowedTargets = 2 }
         class zarty_fnc_sideChat { allowedTargets = 0 }
         class zarty_fnc_messageETATimed { allowedTargets = 0 }
-
+        // Wind
+        class wind_fnc_setWind { allowedTargets = 2 }
     };
 
     // List of script commands allowed to be sent from client via remoteExec
