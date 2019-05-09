@@ -14,7 +14,4 @@ hint format ["
 	_strength, _direction
 ];
 
-_target addAction [
-	("<t color=""#fadfbe"">" + ("Set wind") + "</t>"),
-	"wind\1_strength.sqf"
-];
+[_target] execVM "wind\init.sqf";

@@ -7,7 +7,4 @@ _arguments params ["_action_trash"];
 
 hint "Wind change cancelled.";
 
-_target addAction [
-	("<t color=""#fadfbe"">" + ("Set wind") + "</t>"),
-	"wind\1_strength.sqf"
-];
+[_target] execVM "wind\init.sqf";
