@@ -9,7 +9,7 @@
 respawnDelay = 5;
 
 // Force RotorLib
-forceRotorLibSimulation = 1;
+forceRotorLibSimulation = 0;
 
 // CfgFunctions
 class CfgFunctions
