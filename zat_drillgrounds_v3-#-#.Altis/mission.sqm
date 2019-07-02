@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=311;
+		nextID=319;
 	};
 	class Camera
 	{
-		pos[]={24433.223,95.581078,19307.699};
-		dir[]={0.49933541,-0.5645805,-0.65738869};
-		up[]={0.34159222,0.82520998,-0.44971761};
-		aside[]={-0.79638296,1.8879655e-006,-0.60491133};
+		pos[]={24091.701,1378.0942,20059.107};
+		dir[]={0.68227345,-0.48123714,0.55039924};
+		up[]={0.37455866,0.87658584,0.30216157};
+		aside[]={0.62788308,-3.0679803e-007,-0.7783227};
 	};
 };
 binarizationWanted=0;
@@ -8848,19 +8848,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={13204.904,9.7669926,11686.489};
-				angles[]={0.046633169,5.2647333,6.239212};
+				position[]={13204.904,9.7675276,11686.489};
+				angles[]={0.046635196,5.2647333,6.239203};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this addAction [""Spectate"", {[""Initialize"", [player, [], true]] call BIS_fnc_EGSpectator;}];";
+				init="call{nul = [this] execVM ""training\spectate_cone_options.sqf"";}";
 			};
 			id=2274;
 			type="RoadCone_L_F";
-			atlOffset=-0.00053501129;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12984,19 +12983,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={27147.729,1.9669716,25209.932};
-				angles[]={0.058600098,2.1701527,0.055941612};
+				position[]={27147.729,1.9674587,25209.932};
+				angles[]={0.058608156,2.1701598,0.055937801};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this addAction [""Spectate"", {[""Initialize"", [player, [], true]] call BIS_fnc_EGSpectator;}];";
+				init="call{nul = [this] execVM ""training\spectate_cone_options.sqf"";}";
 			};
 			id=3702;
 			type="RoadCone_L_F";
-			atlOffset=-0.0064870119;
+			atlOffset=-0.0059999228;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -13964,19 +13963,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={21563.217,14.358372,10936.932};
-				angles[]={6.2179441,3.7483571,6.1848369};
+				position[]={21563.215,14.358163,10936.932};
+				angles[]={6.2179446,3.7483563,6.1848359};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this addAction [""Spectate"", {[""Initialize"", [player, [], true]] call BIS_fnc_EGSpectator;}];";
+				init="call{nul = [this] execVM ""training\spectate_cone_options.sqf"";}";
 			};
 			id=3846;
 			type="RoadCone_L_F";
-			atlOffset=-0.0016107559;
+			atlOffset=-0.001999855;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52779,7 +52778,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23317.996,3.2568192,19362.016};
+				position[]={23317.996,3.2564132,19362.016};
 				angles[]={0.042638395,3.1415927,0.013334315};
 			};
 			side="Empty";
@@ -52787,11 +52786,11 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this allowDamage False; nul = this addAction[(""<t color=""""#0c00ff"""">"" + (""Freecam"") + ""</t>""),""zamf\debug\freecam.sqf""];";
+				init="call{nul = [this] execVM ""training\spectate_cone_options.sqf"";}";
 			};
 			id=7147;
 			type="RoadCone_L_F";
-			atlOffset=0.030405998;
+			atlOffset=0.029999971;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52821,19 +52820,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23378.094,3.7395611,19362.811};
-				angles[]={0.019996032,3.1415927,6.272521};
+				position[]={23378.094,3.7396159,19362.811};
+				angles[]={0.020001473,3.1415927,6.2725215};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this allowDamage False; nul = this addAction[(""<t color=""""#0c00ff"""">"" + (""Freecam"") + ""</t>""),""zamf\debug\freecam.sqf""];";
+				init="call{nul = [this] execVM ""training\spectate_cone_options.sqf"";}";
 			};
 			id=7148;
 			type="RoadCone_L_F";
-			atlOffset=-5.4836273e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52863,19 +52861,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23438.002,3.705791,19362.982};
-				angles[]={6.256525,3.1415927,6.2551947};
+				position[]={23438.002,3.7055359,19362.982};
+				angles[]={6.2565165,3.1415927,6.2551899};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this allowDamage False; nul = this addAction[(""<t color=""""#0c00ff"""">"" + (""Freecam"") + ""</t>""),""zamf\debug\freecam.sqf""];";
+				init="call{nul = [this] execVM ""training\spectate_cone_options.sqf"";}";
 			};
 			id=7149;
 			type="RoadCone_L_F";
-			atlOffset=0.0012550354;
+			atlOffset=0.00099992752;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52905,19 +52903,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23497.98,2.994262,19362.998};
-				angles[]={0.042640556,3.1415927,0.0039967569};
+				position[]={23497.98,2.9947326,19362.998};
+				angles[]={0.042638395,3.1415927,0.0039968039};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this allowDamage False; nul = this addAction[(""<t color=""""#0c00ff"""">"" + (""Freecam"") + ""</t>""),""zamf\debug\freecam.sqf""];";
+				init="call{nul = [this] execVM ""training\spectate_cone_options.sqf"";}";
 			};
 			id=7150;
 			type="RoadCone_L_F";
-			atlOffset=0.0045294762;
+			atlOffset=0.0050001144;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -84016,19 +84014,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={24501.512,3.5421062,19245.074};
-				angles[]={0,6.2032113,0};
+				position[]={24501.512,3.5420058,19245.074};
+				angles[]={0,6.2032142,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this addAction [""Spectate"", {[""Initialize"", [player, [], true]] call BIS_fnc_EGSpectator;}];";
+				init="call{nul = [this] execVM ""training\spectate_cone_options.sqf"";}";
 			};
 			id=8084;
 			type="RoadCone_L_F";
-			atlOffset=0.010100365;
+			atlOffset=0.0099999905;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -108928,19 +108926,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={27344.506,30.038803,24860.525};
-				angles[]={6.2525291,2.1701527,0.039979152};
+				position[]={27344.506,30.038334,24860.525};
+				angles[]={6.2525201,2.1701598,0.039985489};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this addAction [""Spectate"", {[""Initialize"", [player, [], true]] call BIS_fnc_EGSpectator;}];";
+				init="call{nul = [this] execVM ""training\spectate_cone_options.sqf"";}";
 			};
 			id=11550;
 			type="RoadCone_L_F";
-			atlOffset=-0.003528595;
+			atlOffset=-0.0039978027;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -113506,18 +113504,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11720.238,132.37549,20656.738};
-				angles[]={0,1.9496843,0};
+				position[]={11720.238,132.3759,20656.738};
+				angles[]={0,1.9496899,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this addAction [""Spectate"", {[""Initialize"", [player, [], true]] call BIS_fnc_EGSpectator;}];";
+				init="call{nul = [this] execVM ""training\spectate_cone_options.sqf"";}";
 			};
 			id=12496;
 			type="RoadCone_L_F";
-			atlOffset=1.1465912;
+			atlOffset=0.00039672852;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -118475,7 +118474,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24508,4.85883,19264};
-				angles[]={-0,0,6.276526};
+				angles[]={0,0,6.276526};
 			};
 			side="Empty";
 			flags=4;
@@ -123795,7 +123794,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24575.375,-1.3002496,19221.5};
-				angles[]={0,3.1415925,-0};
+				angles[]={0,3.1415925,0};
 			};
 			side="Empty";
 			flags=4;
@@ -123812,7 +123811,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24567.25,4.5183101,19212.875};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -123829,7 +123828,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24567.25,4.5183101,19200.75};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -123846,7 +123845,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24567.25,4.5183096,19188.625};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -123864,7 +123863,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24567.25,4.5183096,19176.625};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -123882,7 +123881,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24567.25,4.5183096,19164.625};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -123912,7 +123911,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24567.25,4.5183096,19152.625};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -126825,7 +126824,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24546.375,4.5183101,19167.375};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -126842,7 +126841,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24546.375,4.5183101,19151.25};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -126859,7 +126858,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24546.25,4.5183101,19182.625};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -126876,7 +126875,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24546.25,4.5183101,19198.125};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -126893,7 +126892,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24546.125,4.5183101,19213.625};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -129195,7 +129194,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24559,-1.2303176,19137.75};
-				angles[]={0,2.1457672e-006,-0};
+				angles[]={0,2.1457672e-006,0};
 			};
 			side="Empty";
 			flags=4;
@@ -129350,7 +129349,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24559.875,4.0900002,19149.375};
-				angles[]={-0,6.2823129,0};
+				angles[]={0,6.2823129,0};
 			};
 			side="Empty";
 			flags=4;
@@ -130420,7 +130419,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24565.75,4.0900002,19147.125};
-				angles[]={-0,1.5699241,0};
+				angles[]={0,1.5699241,0};
 			};
 			side="Empty";
 			flags=4;
@@ -131165,7 +131164,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24567.25,4.5143099,19143.625};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;

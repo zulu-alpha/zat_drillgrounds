@@ -14,7 +14,7 @@ forceRotorLibSimulation = 0;
 // CfgFunctions
 class CfgFunctions
 {
-	#include "zamf\zamf_cfgfunctions.hpp"
+	#include "zamf\cfgfunctions.hpp"
 	#include "VVS\Functions.h"
 	#include "shoothouse\cfgfunctions.hpp"
     #include "ground_control\cfgfunctions.hpp"
@@ -41,6 +41,8 @@ class CfgRemoteExec
 		class SpawnScript { allowedTargets = 0;jip = 1; };
 		class enableSimulationGlobal { allowedTargets = 0;jip = 1; };
 		class VCM_fnc_KnowAbout { allowedTargets = 0;jip = 1; };
+        // ZAMF
+        #include "zamf\cfgRemoteExec_functions.hpp"
         /*your functions here*/
         // Wind
         class wind_fnc_setWind { allowedTargets = 2 }
@@ -62,9 +64,14 @@ class Extended_PreInit_EventHandlers {
 		init = "call VCM_fnc_CBA_Settings";
 	};
 };
-// ZAMF specific parts of the description.ext
-#include "zamf\zamf_description.hpp"
 
+// ZAMF specific parts of the description.ext
+#include "zamf\description.hpp"
+
+// Misison paramaters
+class Params {
+    #include "zamf\world\world_params.hpp"
+};
 
 //// Put custom code under here:
 #include "VVS\menu.h"
