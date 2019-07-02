@@ -677,7 +677,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="zat_Drill Grounds_v3.6.5";
+		briefingName="zat_Drill Grounds_v3.6.6";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
@@ -131307,6 +131307,7 @@ class Mission
 			};
 			id=14303;
 			type="RoadCone_L_F";
+			atlOffset=-0.00047302246;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -131348,6 +131349,7 @@ class Mission
 			};
 			id=14304;
 			type="Land_FieldToilet_F";
+			atlOffset=-0.00067710876;
 			class CustomAttributes
 			{
 				class Attribute0
