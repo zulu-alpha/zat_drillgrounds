@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={21539.068,41.068558,10961.042};
-		dir[]={0.61112994,-0.64890265,-0.45329878};
-		up[]={0.52122027,0.76082659,-0.38661146};
-		aside[]={-0.59575707,-2.4912879e-008,-0.80318791};
+		pos[]={21957.383,73.729126,19332.047};
+		dir[]={0.84185076,-0.34125009,0.41831627};
+		up[]={0.30576494,0.93989348,0.15193211};
+		aside[]={0.44502535,5.4578413e-007,-0.89559859};
 	};
 };
 binarizationWanted=0;
@@ -83644,6 +83644,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=8067;
 			type="Land_CampingTable_F";
@@ -83660,6 +83661,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=8068;
 			type="Land_CampingTable_small_F";
@@ -83676,6 +83678,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=8069;
 			type="Land_CampingTable_small_F";
@@ -83852,16 +83855,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={24501.758,5.2903719,19240.008};
+				position[]={24501.758,5.2906733,19240.008};
 				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=8080;
 			type="CamoNet_OPFOR_open_F";
-			atlOffset=0.98769879;
+			atlOffset=0.98800015;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -116373,6 +116377,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13014;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -116390,6 +116395,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13015;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -116407,6 +116413,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13016;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -116424,6 +116431,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13017;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -116441,6 +116449,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13018;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -116458,6 +116467,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13019;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -116474,6 +116484,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13020;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -116490,6 +116501,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13021;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -116506,6 +116518,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13059;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -116521,6 +116534,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13060;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -116594,6 +116608,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13062;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -116610,6 +116625,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13063;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -116748,6 +116764,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13070;
 			type="Land_Shoot_House_Wall_Prone_F";
@@ -116764,6 +116781,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13075;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -116780,6 +116798,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13076;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -116796,6 +116815,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13079;
 			type="Land_Shoot_House_Wall_Prone_F";
@@ -116812,6 +116832,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13086;
 			type="Land_Shoot_House_Wall_Prone_F";
@@ -116828,6 +116849,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13087;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -116843,6 +116865,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13088;
 			type="Land_Shoot_House_Wall_Prone_F";
@@ -116899,6 +116922,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13065;
 			type="Land_Shoot_House_Wall_Prone_F";
@@ -116915,6 +116939,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13296;
 			type="Land_Shoot_House_Wall_Prone_F";
@@ -116931,6 +116956,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13297;
 			type="Land_Shoot_House_Wall_Prone_F";
@@ -117069,6 +117095,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13299;
 			type="Land_Shoot_House_Wall_Prone_F";
@@ -117085,6 +117112,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13300;
 			type="Land_Shoot_House_Wall_Prone_F";
@@ -117223,6 +117251,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13302;
 			type="Land_Shoot_House_Wall_Prone_F";
@@ -117239,6 +117268,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13303;
 			type="Land_Shoot_House_Wall_Prone_F";
@@ -117377,6 +117407,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13067;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -117392,6 +117423,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13310;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -117407,6 +117439,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13311;
 			type="Land_Shoot_House_Wall_Prone_F";
@@ -117423,6 +117456,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13313;
 			type="Land_Shoot_House_Wall_Prone_F";
@@ -117439,6 +117473,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13314;
 			type="Land_Shoot_House_Wall_Prone_F";
@@ -117455,6 +117490,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13315;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -117471,6 +117507,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13316;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -117486,6 +117523,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13317;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -117501,6 +117539,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13319;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -117516,6 +117555,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13320;
 			type="Land_Shoot_House_Wall_Long_Prone_F";
@@ -117532,6 +117572,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13321;
 			type="Land_PierWooden_01_ladder_F";
@@ -117570,6 +117611,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13322;
 			type="Land_Obstacle_Ramp_F";
@@ -117609,6 +117651,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13323;
 			type="Land_Obstacle_Ramp_F";
@@ -117648,6 +117691,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13324;
 			type="Land_Obstacle_Ramp_F";
@@ -117687,6 +117731,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13325;
 			type="Land_Obstacle_Ramp_F";
@@ -117726,6 +117771,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13326;
 			type="Land_Obstacle_Ramp_F";
@@ -117766,6 +117812,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13327;
 			type="Land_PierWooden_01_ladder_F";
@@ -117806,6 +117853,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13328;
 			type="Land_Obstacle_Ramp_F";
@@ -117845,6 +117893,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13332;
 			type="Land_PierWooden_01_ladder_F";
@@ -117885,6 +117934,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13334;
 			type="Land_PierWooden_01_10m_noRails_F";
@@ -117943,6 +117993,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13335;
 			type="Land_Obstacle_Ramp_F";
@@ -117983,6 +118034,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13336;
 			type="Land_PierWooden_01_ladder_F";
@@ -118021,6 +118073,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13337;
 			type="Land_Obstacle_Ramp_F";
@@ -118060,6 +118113,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13338;
 			type="Land_Obstacle_Ramp_F";
@@ -118099,6 +118153,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13339;
 			type="Land_Obstacle_Ramp_F";
@@ -118138,6 +118193,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13340;
 			type="Land_PierWooden_01_ladder_F";
@@ -118176,6 +118232,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13341;
 			type="Land_Obstacle_Ramp_F";
@@ -118216,6 +118273,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13348;
 			type="Land_PierWooden_01_10m_noRails_F";
@@ -118342,6 +118400,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13617;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -118382,6 +118441,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13618;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -118421,6 +118481,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13619;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -118459,6 +118520,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13620;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -118498,6 +118560,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13621;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -118538,6 +118601,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13622;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -118577,6 +118641,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13623;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -118616,6 +118681,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13624;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -118656,6 +118722,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13625;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -118696,6 +118763,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13626;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -118736,6 +118804,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=13627;
 			type="Land_GarbageContainer_closed_F";
@@ -118753,6 +118823,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=13629;
 			type="Land_BarrelTrash_grey_F";
@@ -118770,6 +118842,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13630;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -118810,6 +118883,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13631;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -118850,6 +118924,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13632;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -118890,6 +118965,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13633;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -118930,6 +119006,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13634;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -118970,6 +119047,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13635;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -119010,6 +119088,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13636;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -119050,6 +119129,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13637;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -119090,6 +119170,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=13638;
 			type="Land_GarbageContainer_open_F";
@@ -119107,6 +119189,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=13639;
 			type="Land_BarrelTrash_F";
@@ -119124,6 +119208,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=13640;
 			type="Land_BarrelTrash_grey_F";
@@ -119141,6 +119227,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13641;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -119181,6 +119268,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13642;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -119220,6 +119308,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13652;
 			type="Land_Shoot_House_Corner_F";
@@ -119236,6 +119325,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13653;
 			type="Land_Shoot_House_Corner_F";
@@ -119252,6 +119342,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13656;
 			type="Land_Shoot_House_Wall_F";
@@ -119269,6 +119360,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13657;
 			type="Land_Shoot_House_Wall_F";
@@ -119286,6 +119378,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13658;
 			type="Land_Shoot_House_Corner_F";
@@ -119302,6 +119395,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13659;
 			type="Land_Shoot_House_Corner_F";
@@ -119318,6 +119412,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13660;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -119357,6 +119452,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13661;
 			type="Land_Shoot_House_Corner_F";
@@ -119374,6 +119470,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13662;
 			type="Land_Shoot_House_Corner_F";
@@ -119391,6 +119488,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13663;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -119430,6 +119528,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13664;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -119470,6 +119569,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13666;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -119509,6 +119609,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13673;
 			type="Land_Shoot_House_Wall_F";
@@ -119525,6 +119626,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13674;
 			type="Land_Shoot_House_Wall_F";
@@ -119541,6 +119643,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13675;
 			type="Land_Shoot_House_Wall_F";
@@ -119558,6 +119661,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13676;
 			type="Land_Shoot_House_Wall_F";
@@ -119574,6 +119678,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13677;
 			type="Land_Shoot_House_Wall_F";
@@ -119591,6 +119696,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13678;
 			type="Land_Shoot_House_Wall_F";
@@ -119607,6 +119713,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13679;
 			type="Land_Shoot_House_Wall_F";
@@ -119623,6 +119730,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13681;
 			type="Land_Shoot_House_Wall_F";
@@ -119639,6 +119747,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13682;
 			type="Land_Shoot_House_Wall_F";
@@ -119656,6 +119765,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13684;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -119696,6 +119806,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13689;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -119735,6 +119846,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13698;
 			type="Land_Shoot_House_Wall_F";
@@ -119752,6 +119864,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13706;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -119791,6 +119904,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13707;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -119831,6 +119945,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13710;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -119870,6 +119985,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13709;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -119909,6 +120025,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13696;
 			type="Land_Shoot_House_Wall_F";
@@ -119926,6 +120043,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13700;
 			type="Land_Shoot_House_Wall_Crouch_F";
@@ -119943,6 +120061,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13717;
 			type="Land_Shoot_House_Wall_F";
@@ -119960,6 +120079,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13719;
 			type="Land_Shoot_House_Corner_F";
@@ -119977,6 +120097,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13720;
 			type="Land_Shoot_House_Corner_F";
@@ -119994,6 +120115,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13714;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -120033,6 +120155,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13727;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -120073,6 +120196,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13728;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -120113,6 +120237,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13729;
 			type="Land_Shoot_House_Wall_F";
@@ -120130,6 +120255,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13730;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -120170,6 +120296,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13731;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -120210,6 +120337,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13732;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -120250,6 +120378,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13735;
 			type="Land_Shoot_House_Wall_F";
@@ -120266,6 +120395,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13737;
 			type="Land_Shoot_House_Wall_F";
@@ -120283,6 +120413,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13738;
 			type="Land_Shoot_House_Corner_F";
@@ -120299,6 +120430,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13739;
 			type="Land_Shoot_House_Corner_F";
@@ -120316,6 +120448,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13743;
 			type="Land_Shoot_House_Wall_Long_F";
@@ -120356,6 +120489,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13744;
 			type="Land_Shoot_House_Wall_F";
@@ -120373,6 +120507,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=13746;
 			type="Land_Shoot_House_Wall_F";
