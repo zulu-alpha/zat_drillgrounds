@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={21889.434,50.147705,19503.141};
-		dir[]={0.057088982,-0.32065567,-0.94560432};
-		up[]={0.019326707,0.94707131,-0.32015598};
-		aside[]={-0.99831206,-1.3494864e-006,-0.060273308};
+		pos[]={26871.373,64.890648,24176.711};
+		dir[]={-0.42364326,-0.20712835,-0.88184398};
+		up[]={-0.089762278,0.97827798,-0.18684599};
+		aside[]={-0.90139061,4.649628e-007,0.43303245};
 	};
 };
 binarizationWanted=0;
@@ -678,7 +678,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="zat_Drill Grounds_v3.7.0";
+		briefingName="zat_Drill Grounds_v3.7.1";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
@@ -693,6 +693,7 @@ class Mission
 		windForced=1;
 		year=2035;
 		month=6;
+		day=3;
 		hour=16;
 		minute=0;
 		startFogDecay=0.014;
