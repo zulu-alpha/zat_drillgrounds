@@ -1,0 +1,1 @@
+_this addAction[("<t color=""#fadfbe"">" + ("Configure new jump") + "</t>"),"halo\first_alt.sqf"];
