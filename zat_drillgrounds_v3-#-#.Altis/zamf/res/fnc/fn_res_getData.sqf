@@ -2,9 +2,6 @@
 
 	AUTHOR: Phoenix
 
-	DOWNLOAD & PARTICIPATE:
-	https://bitbucket.org/zulualpha/
-
 	DESCRIPTION:
 	This gets the data to be saved onto the server
 
@@ -18,12 +15,13 @@
 		getPosASL _player,
 		getDir _player,
 		getDammage _player,
-		if (alive _player) then {[_player, ["ammo","repetitive"]] call zamf_fnc_getLoadout} else {[]},
+		if (alive _player) then {getUnitLoadout _player} else {[]},
 		captiveNum _player,
 		animationState _player,
 		_crew,
 		typeOf _player,
-		hasEar plugs
+		hasEar plugs,
+		roleDescription
 
 	EG: [
 		WEST,
@@ -36,19 +34,20 @@
 		"amovpercmstpsnonwnondnon",
 		[B 0:1 (Phoenix),""],
 		"B_Soldier_SL_F",
-		false
+		false,
+		"1'1 [R]"
 	]
 
 */
 
-private ["_player", "_vehicle", "_crew"];
+params ["_player"];
 
 _player = _this select 0;
 
-_vehicle = vehicle _player;
+private _vehicle = vehicle _player;
 
 // Check if the player is in a vehicle. If so, determine where. If not in driver, gunner or commander, then in cargo.
-_crew = call {
+private _crew = call {
 
 	if (_vehicle == _player) exitWith {[_vehicle, ""]};
 	if (driver _vehicle == _player) exitWith {[_vehicle, "Driver"]};
@@ -65,10 +64,11 @@ _crew = call {
 	getPosASL _player,
 	getDir _player,
 	getDammage _player,
-	if (alive _player) then {[_player, ["ammo","repetitive"]] call zamf_fnc_getLoadout} else {[]},
+	if (alive _player) then {getUnitLoadout _player} else {[]},
 	captiveNum _player,
 	animationState _player,
 	_crew,
 	typeOf _player,
-	[_player] call ace_Hearing_fnc_hasEarPlugsIn
+	[_player] call ace_Hearing_fnc_hasEarPlugsIn,
+	roleDescription _player
 ]
