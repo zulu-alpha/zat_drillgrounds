@@ -19,6 +19,9 @@
 // VCOM AI
 [] execVM "Vcom\VcomInit.sqf";
 
+// Devas Autopilot
+[] execVM "AutoPilot\AutoPilotInit.sqf";
+
 //// Youre code here
 call compile preprocessfilelinenumbers "gunnery_range\gun_init.sqf";
 // All players spectate while unconscious due to ACE medical
