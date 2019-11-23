@@ -12,7 +12,6 @@
 */
 
 [] spawn {
-
 	missionNamespace setVariable ["knowledge_isActive", true, true];
 
 	private ["_eh_index", "_drawJobs", "_drawJobs_isNear"];
@@ -86,6 +85,13 @@
 		};
 	};
 
+	// Cleanup after turning off
+	{
+		private _group_ID = _x call BIS_fnc_netId;
+		{
+			[_group_ID, _x] call knowledge_fnc_deleteCircle
+		} forEach (allPlayers - entities "HeadlessClient_F");
+	} forEach (call knowledge_fnc_allAIGroups);
 	if (hasInterface) then {removeMissionEventHandler ["Draw3D", _eh_index]};
 
 };

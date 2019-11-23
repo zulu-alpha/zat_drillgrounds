@@ -10,8 +10,8 @@
 				 	leader knowsAbout value,
 					known by group
 					known by the unit
-					last time the target was seen by the unit
-					last time the target endangered the unit
+					last time in seconds the target was seen by the unit - STRING
+					last time in seconds the target endangered the unit - STRING
 					target side
 					position error
 					target position
@@ -49,8 +49,8 @@ if (local _group) then {
 		_leader knowsAbout _player,
 		_known_by_group,
 		_known_by_leader,
-		_last_seen,
-		_last_endangered,
+		if (_last_seen <= 0) then {"N/A"} else {str (round (time - _last_seen))},
+		if (_last_endangered <= 0) then {"N/A"} else {str (round (time - _last_endangered))},
 		_target_side,
 		_position_error,
 		_target_position

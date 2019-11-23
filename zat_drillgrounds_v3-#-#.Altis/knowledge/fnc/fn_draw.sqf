@@ -52,16 +52,16 @@
 			"%2%1, Seen: %3s, Danger: %4s, Dist: %5m",
 			"%",
 			round (linearConversion [0, 4, _knows_about_level, 0, 100, false]),
-			round (time - _last_seen),
-			if (_last_endangered <= 0) then {"N/A"} else {round (time - _last_endangered)},
+			_last_seen,
+			_last_endangered,
 			round (_eyePos distance _targetPos)
 		],
 		0,
 		// Base size / distance to player camera, capped to 70 meters for max size of text
-		// * zoom level and max all of this to 0.018 for minimum size of text and min that
-		// to 0.1 for a maximum size
+		// * zoom level and max all of this to 0.013 for minimum size of text and min that
+		// to 0.03 for a maximum size
 		((2 / ((_eyePos distance (positionCameraToWorld [0,0,0])) max 0.01) * 
-			(call knowledge_fnc_getZoom)) max 0.015) min 0.03,
+			(call knowledge_fnc_getZoom)) max 0.013) min 0.03,
 		"LucidaConsoleB",
 		"center",
 		true
