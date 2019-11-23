@@ -22,6 +22,8 @@ class CfgFunctions
     #include "vcom\cfgFunctions.hpp"
     // Wind
     #include "wind\cfgFunctions.hpp"
+    // Knowledge
+    #include "knowledge\cfgfunctions.hpp"
 };
 
 // Enabling remote execution: https://community.bistudio.com/wiki/CfgRemoteExec
@@ -46,6 +48,8 @@ class CfgRemoteExec
         /*your functions here*/
         // Wind
         class wind_fnc_setWind { allowedTargets = 2 }
+        // Knowledge
+        class knowledge_fnc_mainLoop { allowedTargets = 0 };
     };
 
     // List of script commands allowed to be sent from client via remoteExec

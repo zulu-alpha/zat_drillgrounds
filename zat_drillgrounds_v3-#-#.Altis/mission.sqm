@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=1.5707964;
 	scaleGridStep=10;
 	autoGroupingDist=10;
-	toggles=37;
+	toggles=5;
 	class ItemIDProvider
 	{
-		nextID=16341;
+		nextID=16342;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=511;
+		nextID=535;
 	};
 	class Camera
 	{
-		pos[]={26802.455,43.633423,24598.113};
-		dir[]={-0.73777574,-0.51991421,0.43061328};
-		up[]={-0.44903192,0.85421318,0.26208329};
-		aside[]={0.5040949,1.0430813e-006,0.86367512};
+		pos[]={26787.324,31.530504,24620.672};
+		dir[]={-0.66428083,-0.40885925,0.62580502};
+		up[]={-0.29761097,0.91259009,0.28037235};
+		aside[]={0.68573314,1.1930242e-006,0.7278955};
 	};
 };
 binarizationWanted=0;
@@ -678,7 +678,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="zat_Drill Grounds_v3.8.2";
+		briefingName="zat_Drill Grounds_v3.9.0";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
@@ -701,7 +701,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=4141;
+		items=4142;
 		class Item0
 		{
 			dataType="Marker";
@@ -198912,6 +198912,23 @@ class Mission
 			init="call{nul = [  " \n "    this,  " \n "    [],  " \n "    [   " \n "  [""IEDUrbanBig_Remote_Mag"", 1]  " \n " ],  " \n "    []  " \n "] execVM ""makeWeaponHolder.sqf"";}";
 			id=16340;
 			type="Logic";
+		};
+		class Item4141
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={26769.25,22.54719,24625.75};
+				angles[]={0.053282689,3.875695,0.027993103};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{[this] call knowledge_fnc_addMenuOptions}";
+			};
+			id=16341;
+			type="Hostage_PopUp2_Moving_F";
 		};
 	};
 	class Connections
