@@ -14,16 +14,21 @@
 [] spawn {
 	missionNamespace setVariable ["knowledge_isActive", true, true];
 
-	private ["_eh_index", "_drawJobs", "_drawJobs_isNear"];
+	private ["_eh_index", "_drawJobs"];
 	if (hasInterface) then {
-		knowledge_drawJobs = [];
-		knowledge_drawJobs_isNear = [];
-		_drawJobs = [];
-		_drawJobs_isNear = [];
+		Knowledge_circles = [false] call CBA_fnc_createNamespace;
+		Knowledge_lastPosError = [false] call CBA_fnc_createNamespace;
+		_drawJobs = [[], []];
 		_eh_index = addMissionEventHandler ["Draw3D", {call knowledge_fnc_draw}];
 	};
 
 	while {sleep 0.5; knowledge_isActive} do {
+
+		if (hasInterface) then {
+			knowledge_drawJobs = +_drawJobs;
+			_drawJobs = [[], []];
+		};
+
 		{
 			private _group = _x;
 			private _group_ID = _group call BIS_fnc_netId;
@@ -50,23 +55,26 @@
 							"_target_position"
 						];
 						if (((leader _group) distance _x) < 150) then {
-							_drawJobs_isNear pushBackUnique _group;
+							(_drawJobs select 1) pushBackUnique _group;
 						};
 						if ((_knows_about_level > 0) and {count (units _group) > 0}) then {
 							[
 								_group_ID, 
-								_x, 
+								_player_ID, 
 								_target_position, 
-								_position_error
+								_position_error,
+								Knowledge_circles,
+								Knowledge_lastPosError
 							] call knowledge_fnc_updateCircle;
-							_drawJobs pushBack [
+							(_drawJobs select 0) pushBack [
 								_leader,
 								_knows_about_level,
 								_known_by_leader,
 								_last_seen,
 								_last_endangered,
 								_target_side,
-								_target_position
+								_target_position,
+								_x
 							];
 						} else {
 							[_group_ID, _x] call knowledge_fnc_deleteCircle;
@@ -77,21 +85,13 @@
 
 		} forEach (call knowledge_fnc_allAIGroups);
 
-		if (hasInterface) then {
-			knowledge_drawJobs = +_drawJobs;
-			_drawJobs = [];
-			knowledge_drawJobs_isNear = +_drawJobs_isNear;
-			_drawJobs_isNear = [];
-		};
 	};
 
 	// Cleanup after turning off
 	{
-		private _group_ID = _x call BIS_fnc_netId;
-		{
-			[_group_ID, _x] call knowledge_fnc_deleteCircle
-		} forEach (allPlayers - entities "HeadlessClient_F");
-	} forEach (call knowledge_fnc_allAIGroups);
+		[_x, Knowledge_circles] call knowledge_fnc_deleteCircle;
+	} forEach (allVariables Knowledge_circles);
+
 	if (hasInterface) then {removeMissionEventHandler ["Draw3D", _eh_index]};
 
 };

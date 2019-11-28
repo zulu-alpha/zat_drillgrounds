@@ -2,20 +2,20 @@
 
     Author: Phoenix of Zulu-Alpha
 
-    Description: Deletes the circle for the given group target combination.
+    Description: Deletes the circle for the given group target combination from 
+                 Knowledge_circleJobs namespace.
 
     Params:
-		0: STRING  - NetID of Group
-		1: OBJECT - Target player
+		0: STRING - Variable name for circle objects in the given namespace.
+    2: OBJECT - Object containing namespace for circles
 
     Returns: None
 
 */
-params ["_group_ID", "_player"];
+params ["_var_name", "_circles_namespace"];
 
-private _var_name = format ["knowledge_circleObjects_from_%1", _group_ID];
 {
 	deleteVehicle _x;
-} forEach (_player getVariable [_var_name, []]);
+} forEach (_circles_namespace getVariable [_var_name, []]);
 
-_player setVariable [_var_name, nil];
+_circles_namespace setVariable [_var_name, nil];

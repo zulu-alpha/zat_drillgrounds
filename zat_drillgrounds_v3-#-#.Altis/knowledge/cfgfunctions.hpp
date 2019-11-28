@@ -33,7 +33,7 @@ class knowledge
         };
         class draw
         {
-            description = "Draws all draw jobs in knowledge_drawJobs and knowledge_drawJobs_isNear.";
+            description = "Draws all draw jobs in knowledge_drawJobs.";
         };
         class getZoom
         {
