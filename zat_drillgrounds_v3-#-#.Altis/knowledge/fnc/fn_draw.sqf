@@ -84,7 +84,7 @@ private _knowledge_drawJobs = missionNamespace getVariable [
 
 		private _start_point = ASLToAGL eyePos _x;
 		private _end_point = _start_point vectorAdd (
-			(eyeDirection _x) vectorMultiply 100
+			(eyeDirection _x) vectorMultiply 6
 		);
 		drawLine3D [
 			_start_point,
