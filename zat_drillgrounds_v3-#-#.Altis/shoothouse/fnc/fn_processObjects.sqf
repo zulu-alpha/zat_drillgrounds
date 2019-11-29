@@ -34,7 +34,10 @@ private _buildings = [];
     if !(_found) then {
         {
             if (_sync_x isKindOf _x) exitWith {
-                _groups set [count _groups, [_sync_x] call shoothouse_fnc_processTarget];
+                private _group_array = [_sync_x] call shoothouse_fnc_processTarget;
+                if !(isNil {_group_array}) then {
+                    _groups pushBack (_group_array);
+                };
                 _found = True;
             };
         } count shoothouse_var_classes_target;
@@ -44,7 +47,7 @@ private _buildings = [];
     if !(_found) then {
         {
             if (_sync_x isKindOf _x) exitWith {
-                _doors set [count _doors, _sync_x];
+                _doors pushBack _sync_x;
                 _found = True;
             };
         } count shoothouse_var_classes_door;
@@ -54,7 +57,7 @@ private _buildings = [];
     if !(_found) then {
         {
             if (_sync_x isKindOf _x) exitWith {
-                _interfaces set [count _interfaces, _sync_x];
+                _interfaces pushBack _sync_x;
                 _found = True;
             };
         } count shoothouse_var_classes_interface;
@@ -62,7 +65,7 @@ private _buildings = [];
 
     // Building, if nothing else
     if !(_found) then {
-        _buildings set [count _buildings, _sync_x];
+        _buildings set [count _buildings, _sync_x];  // Strange bug (Error Type Number, expected Bool) when using pushBack
     };
 
 } count synchronizedObjects _course;

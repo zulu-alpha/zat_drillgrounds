@@ -7,16 +7,34 @@
     Params:
         0: OBJECT - Course object
         1: ARRAY - Target settings of format [<if live or not BOOL>, <ratio of targets to spawn NUMBER>, <skill NUMBER>]
-        2: ARRAY - Group to spawn, each of format [[<class name string>, <SIDE>, <position atl array>, <direction number>, <stance string>]]
+        2: ARRAY - Groups to spawn, each of format [[<class name string>, <SIDE>, <position atl array>, <direction number>, <stance string>]]
+        3: NUMBER - Ratio of units to spawn in the group
 
     Returns: None
 
 */
 
-params ["_course", "_settings", "_group_array"];
+params ["_course", "_settings", "_group_array", "_ratio"];
 _settings params ["_live", "_ratio", "_skill"];
 
-private _side = (_group_array select 0) select 1;  // Use first target of group for it's side
+private _count_of_pool = (count _group_array);
+private _num_to_spawn = round (_count_of_pool * _ratio);
+if (_num_to_spawn == 0) exitWith {};
+
+private _unit_pool_indexes = [];
+// Will keep selecting a random and unique index refernce for the group array until the 
+// correct number of them are selected.
+while {count _unit_pool_indexes < _num_to_spawn} do {
+    private _index = round (random (_count_of_pool - 1));
+    _unit_pool_indexes pushBackUnique _index;
+};
+
+private _units_to_spawn = [];
+{
+    _units_to_spawn pushBack (_group_array select _x);
+} forEach _unit_pool_indexes;
+
+private _side = (_units_to_spawn select 0) select 1;  // Use first target of group for it's side
 private _target_group = createGroup _side;
 
 {
@@ -47,13 +65,10 @@ private _target_group = createGroup _side;
     };
     _target_object setUnitPos _unitPos;
 
-} forEach _group_array;
+} forEach _units_to_spawn;
 
 // VCOM
-{
-    _target_group setVariable [_x, true];
-} forEach ["VCM_NOFLANK", "VCM_NORESCUE", "VCM_TOUGHSQUAD"];
-
+_target_group setVariable ["Vcm_Disable", true];
 
 // Register group with server. Use thread in order to ensure that registration is successfull
 // Also exit with warning after 5 tries

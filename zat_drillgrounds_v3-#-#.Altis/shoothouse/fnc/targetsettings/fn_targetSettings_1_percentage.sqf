@@ -38,11 +38,11 @@ _course setVariable ["shoothouse_settings_target", [_live, _ratio, _skill], true
 
 hint parseText format [
     "<t align='center'>
-    Choose the ratio of groups to spawn.
+    Choose the ratio of targets to create.
     <br/>
     <br/>Current settings:
     <br/>Live: <t color='#ffff00'>%2</t>
-    <br/>Percentage of possible groups: <t color='#ffff00'>%3%1</t>
+    <br/>Percentage of targets to create: <t color='#ffff00'>%3%1</t>
     <br/>Skill percentage: <t color='#ffff00'>%4%1</t>",
     "%",
     _live,

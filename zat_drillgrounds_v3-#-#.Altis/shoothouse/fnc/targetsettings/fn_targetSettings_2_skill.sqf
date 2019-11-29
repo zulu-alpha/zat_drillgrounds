@@ -42,7 +42,7 @@ hint parseText format [
     <br/>
     <br/>Current settings:
     <br/>Live: <t color='#ffff00'>%2</t>
-    <br/>Percentage of possible groups: <t color='#ffff00'>%3%1</t>
+    <br/>Percentage of targets to create: <t color='#ffff00'>%3%1</t>
     <br/>Skill percentage: <t color='#ffff00'>%4%1</t>",
     "%",
     _live,

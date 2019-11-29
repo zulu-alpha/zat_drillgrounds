@@ -20,58 +20,40 @@ _groups = _course getVariable ["shoothouse_groups", []];
 // Don't spawn if there are still active groups
 if ( count (_course getVariable ["shoothouse_groups_active", []]) > 0 ) exitWith {diag_log "shootHouse: Error, course still active"};
 
-// Number to spawn
-private _num_pool = count _groups;
-private _num_spawn = round(_num_pool * _ratio);
-
 // Hint
+private _total_units = 0;
+{
+    _total_units = _total_units + round (count _x * _ratio)  // multiplying ratio here to account for rounding errors
+} forEach _groups;
 private _message = parseText format [
     "<t align='center'>
-    Spawning <t color='#ffff00'>%2</t> groups with settings:
+    Creating <t color='#ffff00'>%2</t> targets with settings:
     <br/>Live: <t color='#ffff00'>%3</t>
     <br/>Skill percentage: <t color='#ffff00'>%4%1</t>",
     "%",
-    _num_spawn,
+    _total_units,
     _live,
     _skill * 100
 ];
 [_message] remoteExec ["shoothouse_fnc_hint", owner _caller];
 
-// Select groups to spawn
-private _groups_pool_indexes = [];
-
-// Run loop for as many times as there are groups to spawn
-while {count _groups_pool_indexes < _num_spawn} do {
-
-    // Randomly pick an index for the pool
-    private _cur_index = round (random (_num_pool-1));
-
-    // If the index not already picked, add
-    if !(_cur_index in _groups_pool_indexes) then {
-        _groups_pool_indexes set [count _groups_pool_indexes, _cur_index];
-    };
-
-};
-
-// Populate spawn array using the random indexes of pool array of the correct amount
-private _groups_spawn = [];
-{
-    _groups_spawn set [count _groups_spawn, _groups select _x];
-} count _groups_pool_indexes;
-
-
 // Spawn on server if no HCs
 if (count shoothouse_var_hc_array == 0) exitWith {
     {
-        [_course, [_live, _ratio, _skill], _x] call shoothouse_fnc_spawnGroup;
-    } forEach _groups_spawn;
+        [_course, [_live, _ratio, _skill], _x, _ratio] call shoothouse_fnc_spawnGroup;
+    } forEach _groups;
 };
 
 // or Spawn on HC if only one
 if (count shoothouse_var_hc_array == 1) exitWith {
     {
-        [_course, [_live, _ratio, _skill], _x] remoteExec ["shoothouse_fnc_spawnGroup", shoothouse_var_hc_array select 0];
-    } forEach _groups_spawn;
+        [
+            _course,
+            [_live, _ratio, _skill],
+            _x,
+            _ratio
+        ] remoteExec ["shoothouse_fnc_spawnGroup", shoothouse_var_hc_array select 0];
+    } forEach _groups;
 };
 
 // Else spawn on multiple HCs using balancing algorithm
@@ -115,14 +97,17 @@ for "_i" from 1 to (_num_spawn) do {
 
 };
 
-
 // Spawn the appropriate number of AI groups needed for each HC
 private _group_index = 0;
-diag_log str(_groups_spawn);
 {
 
     for "_i" from 1 to (_to_spawns select _forEachIndex) do {
-        [_course, [_live, _ratio, _skill], _groups_spawn select _group_index] remoteExec ["shoothouse_fnc_spawnGroup", _x];
+        [
+            _course,
+            [_live, _ratio, _skill],
+            _groups select _group_index,
+            _ratio
+        ] remoteExec ["shoothouse_fnc_spawnGroup", _x];
         _group_index = _group_index + 1;
         diag_log str(_group_index);
     };
