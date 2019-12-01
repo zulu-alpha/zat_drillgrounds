@@ -16,7 +16,7 @@ if !(isServer) exitWith {};
 params ["_course"];
 
 private _interfaces = [];
-private _groups = [];
+private _group_arrays = [];
 private _doors = [];
 private _buildings = [];
 
@@ -36,7 +36,7 @@ private _buildings = [];
             if (_sync_x isKindOf _x) exitWith {
                 private _group_array = [_sync_x] call shoothouse_fnc_processTarget;
                 if !(isNil {_group_array}) then {
-                    _groups pushBack (_group_array);
+                    _group_arrays pushBack _group_array;
                 };
                 _found = True;
             };
@@ -71,7 +71,7 @@ private _buildings = [];
 } count synchronizedObjects _course;
 
 _course setVariable ["shoothouse_interfaces", _interfaces];
-_course setVariable ["shoothouse_groups", _groups];
+_course setVariable ["shoothouse_group_arrays", _group_arrays];
 _course setVariable ["shoothouse_doors", _doors];
 _course setVariable ["shoothouse_buildings", _buildings];
 

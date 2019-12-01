@@ -11,12 +11,12 @@
 
 */
 
-params ["_groups_array"];
+params ["_groups"];
 
 private _total = 0;
 
 {
     _total = _total + (count (units _x))
-} count _groups_array;
+} count _groups;
 
 _total

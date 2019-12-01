@@ -15,9 +15,12 @@
 params ["_course", "_caller"];
 
 
-private _active = _course getVariable ["shoothouse_groups_active", []];
-private _active_num = count _active;
-private _total_units = [_active] call shoothouse_fnc_totalUnits;
+private _active_groups = _course getVariable ["shoothouse_groups_active", []];
+private _total_units = [_active_groups] call shoothouse_fnc_totalUnits;
+private _count_active_groups = count _active_groups;
+
+diag_log format ["fn_requestDeleteGroups.sqf: _count_active_groups %1", _count_active_groups];
+diag_log format ["fn_requestDeleteGroups.sqf: _total_units %1", _total_units];
 
 // Delete junk
 {
@@ -25,8 +28,8 @@ private _total_units = [_active] call shoothouse_fnc_totalUnits;
 } forEach (_course getVariable ["shoothouse_junk", []]);
 
 // Delete groups
-for "_i" from 0 to (_active_num - 1) do {
-    private _group_obj = _active deleteAt 0;
+for "_i" from 0 to ((_count_active_groups) - 1) do {
+    private _group_obj = _active_groups deleteAt 0;
 
     if !(isNull _group_obj) then {
         if !(local _group_obj) then {
@@ -41,10 +44,9 @@ for "_i" from 0 to (_active_num - 1) do {
 private _message = parseText format [
     "<t align='center'>
     Deleted <t color='#ffff00'>%1</t> groups and <t color='#ffff00'>%2</t> targets",
-    _active_num,
+    _count_active_groups,
     _total_units
 ];
 [_message] remoteExec ["shoothouse_fnc_hint", owner _caller];
 
-
-_course setVariable ["shoothouse_groups_active", _active, true];
+_course setVariable ["shoothouse_groups_active", _active_groups, true];

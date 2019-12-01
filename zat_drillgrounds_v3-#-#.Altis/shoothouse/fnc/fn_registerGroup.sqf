@@ -14,9 +14,9 @@
 
 params ["_course", "_target_group"];
 
-private _active = _course getVariable ["shoothouse_groups_active", []];
-_active set [count _active, _target_group];
-_course setVariable ["shoothouse_groups_active", _active, true];
+private _active_groups = _course getVariable ["shoothouse_groups_active", []];
+_active_groups pushBackUnique _target_group;
+_course setVariable ["shoothouse_groups_active", _active_groups, true];
 
 // Register all units in the groups for future junk deletion
 private _junk = _course getVariable ["shoothouse_junk", []];

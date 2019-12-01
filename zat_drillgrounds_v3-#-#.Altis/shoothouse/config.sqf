@@ -12,6 +12,9 @@
 
 */
 
+shoothouse_var_door_open = 1;
+shoothouse_var_door_close = 0;
+
 // Server only
 if (isServer) then {
 
@@ -47,6 +50,3 @@ if (!(isServer) and !(hasInterface)) then {
 
 
 };
-
-shoothouse_var_door_open = 1;
-shoothouse_var_door_close = 0;
