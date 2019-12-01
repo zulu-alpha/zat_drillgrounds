@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=655;
+		nextID=667;
 	};
 	class Camera
 	{
-		pos[]={24523.359,19.117613,19254.084};
-		dir[]={0.48808715,-0.46210086,-0.74059904};
-		up[]={0.25448009,0.88663542,-0.38613605};
-		aside[]={-0.83506334,-3.2786047e-006,-0.55035228};
+		pos[]={24516.646,21.957075,19245.607};
+		dir[]={0.593539,-0.50032699,-0.63058162};
+		up[]={0.34316295,0.86562347,-0.36457998};
+		aside[]={-0.72824609,-3.6581478e-006,-0.68547958};
 	};
 };
 binarizationWanted=0;
@@ -687,7 +687,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="zat_Drill Grounds_v3.11.1";
+		briefingName="zat_Drill Grounds_v3.11.2";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
@@ -197095,7 +197095,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={24564.846,3.1914389,19208.992};
+						position[]={24564.563,3.1914389,19208.992};
 						angles[]={0,0.78539819,0};
 					};
 					side="Independent";
@@ -197202,7 +197202,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={24569.77,3.1914389,19217.059};
+						position[]={24570.004,3.1914389,19216.945};
 						angles[]={0,3.1415927,0};
 					};
 					side="Independent";
@@ -197251,7 +197251,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={24572.5,3.2514389,19208.926};
+						position[]={24572.229,3.1914389,19208.844};
 					};
 					side="Independent";
 					flags=5;
@@ -197260,7 +197260,6 @@ class Mission
 					};
 					id=16770;
 					type="I_C_Soldier_Para_1_F";
-					atlOffset=0.059999943;
 				};
 				class Item9
 				{
@@ -197299,7 +197298,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={24571.332,3.1914389,19208.895};
+						position[]={24571.094,3.1914389,19208.834};
 					};
 					side="Independent";
 					flags=5;
@@ -197330,7 +197329,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={24566.035,3.1914389,19208.893};
+						position[]={24566.148,3.1914389,19208.863};
 					};
 					side="Independent";
 					flags=5;
