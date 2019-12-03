@@ -23,7 +23,7 @@ _control_object addAction [
         [_target, _caller, true] call paintball_fnc_addParticipant
     },
     nil,
-    -1,
+    1.5,
     true,
     true,
     "",
@@ -36,7 +36,7 @@ _control_object addAction [
         [_target, _caller, true] call paintball_fnc_removeParticipant
     },
     nil,
-    -1,
+    1.5,
     true,
     true,
     "",
@@ -47,9 +47,7 @@ _control_object addAction [
     {
         params ["_target", "_caller", "_actionId", "_arguments"];
         [_target] call paintball_fnc_hintScores
-    },
-    nil,
-    -1
+    }
 ];
 
 _control_object addAction [
@@ -57,7 +55,5 @@ _control_object addAction [
     {
         params ["_target", "_caller", "_actionId", "_arguments"];
         [_target] call paintball_fnc_clearScores
-    },
-    nil,
-    -1
+    }
 ];

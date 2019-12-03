@@ -26,6 +26,8 @@ class CfgFunctions
     #include "knowledge\cfgfunctions.hpp"
     // Paintball mode
     #include "paintball\cfgfunctions.hpp"
+    // Competition MVP
+    #include "competition\cfgfunctions.hpp"
 };
 
 // Enabling remote execution: https://community.bistudio.com/wiki/CfgRemoteExec
