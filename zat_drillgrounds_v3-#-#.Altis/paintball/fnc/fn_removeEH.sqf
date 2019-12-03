@@ -15,9 +15,9 @@
 
 params ["_participant"];
 
-private _eh_id = _participant getVariable ["shoothouse_paintball_eh_id", -1];
+private _eh_id = _participant getVariable ["paintball_eh_id", -1];
 
 if !(_eh_id == -1) then {
 	_participant removeEventHandler ["HitPart", _eh_id];
-	_participant setVariable ["shoothouse_paintball_eh_id", nil, false];
+	_participant setVariable ["paintball_eh_id", nil, false];
 };

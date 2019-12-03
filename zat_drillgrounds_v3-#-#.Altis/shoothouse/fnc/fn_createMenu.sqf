@@ -81,17 +81,6 @@ _action = _interface addAction [
 _action_trash set [count _action_trash, _action];
 
 _action = _interface addAction [
-    ("<t color=""#FFBF00"">" + ("Paintball mode menu") + "</t>"),
-    shootHouse_fnc_paintball_createMenu,
-    [_action_trash, _course],
-    1.5,
-    true,
-    true,
-    "",
-    _is_not_active];
-_action_trash set [count _action_trash, _action];
-
-_action = _interface addAction [
     ("<t color=""#013ADF"">" + ("Stop being captive") + "</t>"),
     {[(_this select 3) select 0, _this select 1] call shootHouse_fnc_switchCaptive},
     [_course],

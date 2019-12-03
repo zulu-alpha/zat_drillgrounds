@@ -13,10 +13,10 @@
 
 params ["_course"];
 
-private _participants = _course getVariable ["shoothouse_paintballers", []];
+private _participants = _course getVariable ["paintballers", []];
 
 {
-	_x setVariable ["shoothouse_paintball_hits", 0, true];
+	_x setVariable ["paintball_hits", 0, true];
 } forEach _participants;
 
 hint "Scores cleared!";

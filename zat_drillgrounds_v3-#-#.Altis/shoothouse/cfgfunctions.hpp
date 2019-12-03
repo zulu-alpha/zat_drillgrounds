@@ -98,36 +98,4 @@ class shootHouse
             description = "Saves skill setting";
         };
     };
-    class paintball
-    {
-        file = "shoothouse\fnc\paintball";
-        class paintball_addParticipant
-        {
-            description = "Monitor participant for paintball mode and activate it for them (involves sending hit info and making it invulnerable).";
-        };
-        class paintball_removeParticipant
-        {
-            description = "Remove the invulnerability and monitoring of the paintball mode participant.";
-        };
-        class paintball_hintScores
-        {
-            description = "Hint all paintbal mode participant's scores.";
-        };
-        class paintball_clearScores
-        {
-            description = "Deletes all paintbal mode participant's scores.";
-        };
-        class paintball_createMenu
-        {
-            description = "Create addaction options for enabling, disabling, or viewing scores of Paintball mode.";
-        };
-        class paintball_addEH
-        {
-            description = "Add the eventhandler to make hinting and scoring work."
-        };
-        class paintball_removeEH
-        {
-            description = "Remove the eventhandler that made hinting and scoring work."
-        };
-    };
 };

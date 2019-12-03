@@ -24,6 +24,8 @@ class CfgFunctions
     #include "wind\cfgFunctions.hpp"
     // Knowledge
     #include "knowledge\cfgfunctions.hpp"
+    // Paintball mode
+    #include "paintball\cfgfunctions.hpp"
 };
 
 // Enabling remote execution: https://community.bistudio.com/wiki/CfgRemoteExec
@@ -50,6 +52,8 @@ class CfgRemoteExec
         class wind_fnc_setWind { allowedTargets = 2 }
         // Knowledge
         class knowledge_fnc_mainLoop { allowedTargets = 0 };
+        // Paintball mode
+        #include "paintball\cfgRemoteExec_functions.hpp"
     };
 
     // List of script commands allowed to be sent from client via remoteExec

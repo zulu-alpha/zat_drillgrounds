@@ -13,11 +13,11 @@
 
 params ["_course"];
 
-private _participants = _course getVariable ["shoothouse_paintballers", []];
+private _participants = _course getVariable ["paintballers", []];
 
 private _score_string = "<t align='center'>Paintball mode hits:";
 {
-	private _hits = _x getVariable ["shoothouse_paintball_hits", 0];
+	private _hits = _x getVariable ["paintball_hits", 0];
 	private _str = format ["<br/>%1: <t color='#ffff00'>%2</t>", name _x, _hits];
 	_score_string = _score_string + _str;
 } forEach _participants;
