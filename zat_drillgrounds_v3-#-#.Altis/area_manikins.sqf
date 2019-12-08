@@ -3,11 +3,12 @@
 
 	Description: Adds Manikin's at various ranges at bearings to experiment with explosives.
 	The script will automatically determine the bearing and ranges of manikin spawns.
+	Spawns are always east.
 
 	Params:
 	  0: OBJECT - The object that stores information and has the addaction options.
 	  1: OBJECT - Reference object the manikins spawns relative to. 
-	  2: STRING - The config name of the man to spawn (decides side).
+	  2: STRING - The config name of the man to spawn.
 	  3: NUMBER - Number of manikin's to spawn
 	  4: NUMBER - Starting distance to spawn from reference object
 	  5: NUMBER - Interval distance to spawn from reference object.
@@ -66,11 +67,11 @@ fnc_manikin_create = {
 	removeAllWeapons _manikin;
 	removeAllItems _manikin;
 	removeAllAssignedItems _manikin;
-	removeUniform _manikin;
-	removeVest _manikin;
-	removeBackpack _manikin;
-	removeHeadgear _manikin;
-	removeGoggles _manikin;
+	//removeUniform _manikin;
+	//removeVest _manikin;
+	//removeBackpack _manikin;
+	//removeHeadgear _manikin;
+	//removeGoggles _manikin;
 	(group _manikin) setVariable ["Vcm_Disable",true];
 
 	{
