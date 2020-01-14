@@ -1,24 +1,38 @@
 /*
 	Author: Phoenix
+
 	Description: Adds addaction menu options for spawning or deleting a manikin on the given object (such as a mat)
-	Usage: nul = [this, "O_G_Soldier_unarmed_F"] execVM "manikin.sqf";
+
+	Params:
+	  0: OBJECT - The object that stores information and has the addaction options.
+	  1: OBJECT - The object the manikin spawns on top of. 
+	  2: STRING - The config name of the man to spawn (decides side).
+
+	Usage: nul = [this, this, "O_G_Soldier_unarmed_F"] execVM "manikin.sqf";
+
+	Reference:
+		damageTypes: bullet, grenade, explosive, shell, vehiclecrash, collision,
+		backblast, stab, punch, falling, ropeburn, drowning, unknown
+
+		Body parts: Head, Body, LeftArm, RightArm, LeftLeg, RightLeg
+
 */
 
-params ["_mat", "_model"];
+params ["_controller", "_mat", "_model"];
 
 
 private _manikin_create = {
 
 	/*
 		Description: For spawning a dummy AI suitable for medical training. Add to object to spawn manikin on
-		Usage: _mat addaction ["Spawn manikin", _manikin_create, [_model], 1.5, true, true, "", "isNull (_target getVariable ['med_dummy', ObjNull])"];
+		Usage: _mat addaction ["Spawn manikin", _manikin_create, [_mat, _model], 1.5, true, true, "", "isNull (_target getVariable ['med_dummy', ObjNull])"];
 	*/
 
-	private _mat = _this select 0;
+	params ["_target", "_caller", "_actionId", "_arguments"];
+	_arguments params ["_mat", "_model"];
 	private _pos = getPosATL _mat;
-	private _model = (_this select 3) select 0;
 
-	if !(isNull (_mat getVariable ["med_dummy", ObjNull])) exitWith {
+	if !(isNull (_target getVariable ["med_dummy", ObjNull])) exitWith {
 		hint "Manikin already spawned!";
 	};
 
@@ -35,20 +49,14 @@ private _manikin_create = {
 	_manikin setPosATL _pos;
 	_manikin setDir (getDir _mat);
 
-	_manikin disableAI "TARGET";
-	_manikin disableAI "AUTOTARGET";
-	_manikin disableAI "MOVE";
-	//_manikin disableAI "ANIM";  // Not sure if has negative effect
-	_manikin disableAI "TEAMSWITCH";
-	_manikin disableAI "FSM";
-	_manikin disableAI "AIMINGERROR";
-	_manikin disableAI "SUPPRESSION";
-	_manikin disableAI "CHECKVISIBLE";
-	_manikin disableAI "COVER";
-	_manikin disableAI "AUTOCOMBAT";
-	_manikin disableAI "PATH";
+	{
+		_manikin disableAI _x;
+	} forEach [
+		"TARGET", "AUTOTARGET", "MOVE", "TEAMSWITCH", "FSM", "AIMINGERROR", "SUPPRESSION",
+		"CHECKVISIBLE", "COVER", "AUTOCOMBAT", "PATH"
+	];
 
-	_mat setVariable ['med_dummy', _manikin, true];
+	_target setVariable ['med_dummy', _manikin, true];
 
 };
 
@@ -59,8 +67,8 @@ private _manikin_delete = {
 		Usage: _mat addaction ["Delete manikin", _manikin_delete, nil , 1.5, true, true, "", "!(isNull (_target getVariable ['med_dummy', ObjNull]))"];
 	*/
 
-	private _mat = _this select 0;
-	private _manikin = _mat getVariable ["med_dummy", ObjNull];
+	params ["_target", "_caller", "_actionId", "_arguments"];
+	private _manikin = _target getVariable ["med_dummy", ObjNull];
 
 	if (isNull _manikin) exitWith {
 		hint "No manikin spawned!"
@@ -77,8 +85,8 @@ private _manikin_add_wound = {
 		Usage: _mat addaction ["Add wound", _manikin_add_wound, nil , 1.5, true, true, "", "!(isNull (_target getVariable ['med_dummy', ObjNull])) and {local (_target getVariable ['med_dummy', ObjNull])}"];
 	*/
 
-	private _mat = _this select 0;
-	private _manikin = _mat getVariable ["med_dummy", ObjNull];
+	params ["_target", "_caller", "_actionId", "_arguments"];
+	private _manikin = _target getVariable ["med_dummy", ObjNull];
 
 	[
 		_manikin, 
@@ -89,22 +97,7 @@ private _manikin_add_wound = {
 
 };
 
-private _manikin_cardiac_arrest = {
 
-	/*
-		Description: Give the manikin a cardiac arrest
-		Usage: _mat addaction ["Give cardiac arrest", _manikin_cardiac_arrest, nil , 1.5, true, true, "", "!(isNull (_target getVariable ['med_dummy', ObjNull])) and {local (_target getVariable ['med_dummy', ObjNull])}"];
-	*/
-
-	private _mat = _this select 0;
-	private _manikin = _mat getVariable ["med_dummy", ObjNull];
-
-	[_manikin] call ace_medical_fnc_setCardiacArrest
-
-};
-
-
-_mat addaction ["Spawn manikin", _manikin_create, [_model], 1.5, true, true, "", "isNull (_target getVariable ['med_dummy', ObjNull])"];
-_mat addaction ["Delete manikin", _manikin_delete, nil , 1.5, true, true, "", "!(isNull (_target getVariable ['med_dummy', ObjNull]))"];
-_mat addaction ["Add wound", _manikin_add_wound, nil , 1.5, true, true, "", "!(isNull (_target getVariable ['med_dummy', ObjNull])) and {local (_target getVariable ['med_dummy', ObjNull])}"];
-_mat addaction ["Give cardiac arrest", _manikin_cardiac_arrest, nil , 1.5, true, true, "", "!(isNull (_target getVariable ['med_dummy', ObjNull])) and {local (_target getVariable ['med_dummy', ObjNull])}"];
+_controller addaction ["Spawn manikin", _manikin_create, [_mat, _model], 1.5, true, true, "", "isNull (_target getVariable ['med_dummy', ObjNull])"];
+_controller addaction ["Delete manikin", _manikin_delete, nil , 1.5, true, true, "", "!(isNull (_target getVariable ['med_dummy', ObjNull]))"];
+_controller addaction ["Add wound", _manikin_add_wound, nil , 1.5, true, true, "", "!(isNull (_target getVariable ['med_dummy', ObjNull])) and {local (_target getVariable ['med_dummy', ObjNull])}"];
