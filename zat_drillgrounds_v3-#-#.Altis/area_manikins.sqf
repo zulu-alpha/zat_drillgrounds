@@ -18,6 +18,9 @@
 	Usage: nul = [this, this, "O_G_Soldier_unarmed_F", 10, 10, 10, 180] execVM "area_manikins.sqf";
 */
 
+if !(hasInterface) exitWith {};
+waitUntil {(time > 1) and {!(isNull player)}};
+
 params [
 	"_controller", "_reference", "_model", "_num_manikins",
 	"_start_dist", "_interval_dist", "_sector"

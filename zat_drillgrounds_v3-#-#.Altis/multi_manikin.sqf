@@ -44,6 +44,9 @@
 
 */
 
+if !(hasInterface) exitWith {};
+waitUntil {(time > 1) and {!(isNull player)}};
+
 params ["_controller"];
 
 private _man_type = "O_G_Soldier_unarmed_F";

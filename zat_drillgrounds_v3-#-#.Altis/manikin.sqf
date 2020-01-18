@@ -18,6 +18,9 @@
 
 */
 
+if !(hasInterface) exitWith {};
+waitUntil {(time > 1) and {!(isNull player)}};
+
 params ["_controller", "_mat", "_model"];
 
 
