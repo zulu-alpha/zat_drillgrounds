@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=811;
+		nextID=835;
 	};
 	class Camera
 	{
-		pos[]={26852.021,67.989876,24619.26};
-		dir[]={-0.86877364,-0.49542463,-0.0053939936};
-		up[]={-0.49549598,0.86859155,-0.003077623};
-		aside[]={-0.0062098443,-7.687554e-007,1.0001005};
+		pos[]={26805.611,34.689388,24630.123};
+		dir[]={-0.88491213,-0.45550179,0.09845297};
+		up[]={-0.45279959,0.89017475,0.050376054};
+		aside[]={0.1105881,-8.9644163e-007,0.9939869};
 	};
 };
 binarizationWanted=0;
@@ -669,7 +669,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="zat_Drill Grounds_v3.13.2";
+		briefingName="zat_Drill Grounds_v3.13.3";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
@@ -44449,17 +44449,16 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={26760,21.097136,24639.551};
-						angles[]={0,0.69352967,6.2820935};
+						position[]={26760,21.096802,24639.551};
+						angles[]={0,0.693524,6.2820859};
 					};
 					side="West";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="call{nul = [this, ""ds"", ""DS""] call zamf_fnc_team; nul = this execvm ""training\training_init.sqf""; this assignCurator curator_ds1}";
-						name="ds_1";
+						init="call{nul = [this, ""ds"", ""DS""] call zamf_fnc_team;" \n "nul = this execvm ""training\training_init.sqf"";" \n "[this, curator_ds1] call zamf_fnc_zeus_ensureUnit;}";
 						description="Lead@DS Staff";
 						isPlayer=1;
 						isPlayable=1;
@@ -44467,6 +44466,7 @@ class Mission
 					};
 					id=7067;
 					type="B_officer_F";
+					atlOffset=0.5359993;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -44629,23 +44629,22 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={26759.25,21.097996,24640.301};
-						angles[]={0,0.693524,6.2820935};
+						position[]={26759.25,21.097765,24640.301};
+						angles[]={0,0.693524,6.2820859};
 					};
 					side="West";
-					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="call{nul = [this, ""ds_grunt"", ""DS""] call zamf_fnc_team; nul = this execvm ""training\training_init.sqf""; this assignCurator curator_ds2}";
-						name="ds_2";
+						init="call{nul = [this, ""ds_grunt"", ""DS""] call zamf_fnc_team;" \n "nul = this execvm ""training\training_init.sqf"";" \n "[this, curator_ds2] call zamf_fnc_zeus_ensureUnit;}";
 						description="XO@DS Staff";
 						isPlayable=1;
 						reportRemoteTargets=1;
 					};
 					id=7068;
 					type="B_engineer_F";
+					atlOffset=0.54300117;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -44789,8 +44788,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={26760.75,21.096277,24639.051};
-						angles[]={0,0.693524,6.2820935};
+						position[]={26760.75,21.096447,24639.051};
+						angles[]={0,0.693524,6.2820859};
 					};
 					side="West";
 					flags=4;
@@ -44798,14 +44797,14 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="call{nul = [this, ""ds_grunt"", ""DS""] call zamf_fnc_team; nul = this execvm ""training\training_init.sqf""; this assignCurator curator_ds2}";
-						name="ds_3";
+						init="call{nul = [this, ""ds_grunt"", ""DS""] call zamf_fnc_team;" \n "nul = this execvm ""training\training_init.sqf"";" \n "[this, curator_ds3] call zamf_fnc_zeus_ensureUnit;}";
 						description="Assistant@DS Staff";
 						isPlayable=1;
 						reportRemoteTargets=1;
 					};
 					id=8940;
 					type="B_engineer_F";
+					atlOffset=0.00016975403;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -44949,6 +44948,7 @@ class Mission
 			{
 			};
 			id=7066;
+			atlOffset=0.5359993;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -44978,13 +44978,13 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={26759.332,21.068008,24638.844};
-				angles[]={0,6.0422831,6.2820935};
+				position[]={26759.33,21.068043,24638.844};
+				angles[]={0,6.0422773,6.2820859};
 			};
 			name="curator_ds1";
 			id=7069;
 			type="ModuleCurator_F";
-			atlOffset=0.50696373;
+			atlOffset=0.50700188;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -45002,7 +45002,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="ds_1";
+							value="";
 						};
 					};
 				};
@@ -45090,13 +45090,13 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={26758.572,21.062496,24639.498};
-				angles[]={0,6.0422831,6.2820935};
+				position[]={26758.572,21.062534,24639.498};
+				angles[]={0,6.0422773,6.2820859};
 			};
 			name="curator_ds2";
 			id=7070;
 			type="ModuleCurator_F";
-			atlOffset=0.50696373;
+			atlOffset=0.50700188;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -45114,7 +45114,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="ds_2";
+							value="";
 						};
 					};
 				};
@@ -45202,13 +45202,13 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={26760.063,21.074667,24638.186};
-				angles[]={0,6.0422831,6.2820935};
+				position[]={26760.063,21.074705,24638.186};
+				angles[]={0,6.0422773,6.2820859};
 			};
 			name="curator_ds3";
 			id=7071;
 			type="ModuleCurator_F";
-			atlOffset=0.50696182;
+			atlOffset=0.50699997;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -45226,7 +45226,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="ds_3";
+							value="";
 						};
 					};
 				};
