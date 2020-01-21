@@ -89,8 +89,8 @@ multi_manikin_fnc_create = {
 	};
 
 	private _manikin_group = createGroup _man_side;
-	_manikin_group deleteGroupWhenEmpty true;
 	private _manikin = _manikin_group createUnit [_man_type, _pos, [], 0, "NONE"];
+	_manikin_group deleteGroupWhenEmpty true;
 	removeAllWeapons _manikin;
 	removeAllItems _manikin;
 	removeAllAssignedItems _manikin;

@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=17863;
+		nextID=17866;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=835;
+		nextID=859;
 	};
 	class Camera
 	{
-		pos[]={26805.611,34.689388,24630.123};
-		dir[]={-0.88491213,-0.45550179,0.09845297};
-		up[]={-0.45279959,0.89017475,0.050376054};
-		aside[]={0.1105881,-8.9644163e-007,0.9939869};
+		pos[]={23955.02,20.958509,18141.674};
+		dir[]={0.67457581,-0.51604354,-0.52788419};
+		up[]={0.40640661,0.85655963,-0.3180308};
+		aside[]={-0.61628252,-2.9988587e-007,-0.7875368};
 	};
 };
 binarizationWanted=0;
@@ -669,7 +669,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="zat_Drill Grounds_v3.13.3";
+		briefingName="zat_Drill Grounds_v3.14.0";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
@@ -692,7 +692,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=3951;
+		items=3953;
 		class Item0
 		{
 			dataType="Marker";
@@ -194242,6 +194242,83 @@ class Mission
 			};
 			id=17862;
 			type="Flag_White_F";
+		};
+		class Item3951
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={23973.467,3.4580002,18123.967};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{[this] call threeddrill_fnc_addMenuOptions;}";
+				name="cone_3ddrill";
+			};
+			id=17863;
+			type="RoadCone_F";
+		};
+		class Item3952
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={23972.908,4.4100609,18125.92};
+				angles[]={0,6.2591519,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init="call{this allowDamage False; nul = [this, ""3DDrill"", ""#ff0000"", ""PRIVATE""] execVM ""move\move_init.sqf"";}";
+			};
+			id=17865;
+			type="Land_FieldToilet_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 	class Connections

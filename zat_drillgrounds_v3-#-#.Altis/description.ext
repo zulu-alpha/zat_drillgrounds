@@ -28,6 +28,8 @@ class CfgFunctions
     #include "paintball\cfgfunctions.hpp"
     // Competition MVP
     #include "competition\cfgfunctions.hpp"
+    // ThreeDDrill
+    #include "threeddrill\cfgfunctions.hpp"
 };
 
 // Enabling remote execution: https://community.bistudio.com/wiki/CfgRemoteExec
