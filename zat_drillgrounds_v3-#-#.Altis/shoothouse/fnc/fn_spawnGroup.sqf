@@ -56,12 +56,12 @@ private _created_groups = [];
     _side_num = getNumber (configfile >> "CfgVehicles" >> _type >> "side");
     _group = switch (_side_num) do {
         case 0: {
-            if (isNull _west_group) then {_west_group = createGroup west};
-            _west_group
-        };
-        case 1: {
             if (isNull _east_group) then {_east_group = createGroup east};
             _east_group
+        };
+        case 1: {
+            if (isNull _west_group) then {_west_group = createGroup west};
+            _west_group
         };
         case 2: {
             if (isNull _resistance_group) then {_resistance_group = createGroup resistance};
