@@ -33,13 +33,13 @@
 			private _group = _x;
 			private _group_ID = _group call BIS_fnc_netId;
 			{
-				if (hasInterface) then {
-					private _player_ID = _x call BIS_fnc_netId;
-					[_group, _player_ID, _x] call knowledge_fnc_groupUpdateKnowledge;
-					private _knowledge = _group getVariable [
-						format ["knowledge_of_%1", _player_ID],
-						nil
-					];
+				private _player_ID = _x call BIS_fnc_netId;
+				[_group, _player_ID, _x] call knowledge_fnc_groupUpdateKnowledge;
+				private _knowledge = _group getVariable [
+					format ["knowledge_of_%1", _player_ID],
+					nil
+				];
+				if (hasInterface and {!(isNil "_knowledge")}) then {
 					_knowledge params [
 						"_leader",
 						"_knows_about_level",
