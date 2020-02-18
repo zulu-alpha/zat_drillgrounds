@@ -23,8 +23,8 @@ _this spawn {
 	[format ["Started init for %1", _logicRoot]] call competition_fnc_log;
 	_logicRoot setVariable ["competition_name", _courseName, true];
 
-	if ((count synchronizedObjects _logicRoot) < 4) then {
-		throw "The course root logic needs 2 trigger labelling game logics (enemy and civ), an interface and the first stage synced to it.";
+	if ((count synchronizedObjects _logicRoot) < 3) then {
+		throw "The course root logic needs 1 or 2 trigger labelling game logics (enemy and optional civ), an interface and the first stage synced to it.";
 	};
 
 	_logicRoot setVariable ["competition_recursedLogics", [_logicRoot], false];
@@ -57,17 +57,16 @@ _this spawn {
 
 	} forEach (synchronizedObjects _logicRoot);
 
-	{
-		private _trigger = _logicRoot getVariable [
-			format ["competition_trigger_%1", _x], objNull
-		];
-		if (isNull _trigger) then {
-			throw (format [
-				"The course root logic needs a/an %1 trigger.",
-				_x
-			]);
-		};
-	} forEach [competition_var_name_TriggerEnemy, competition_var_name_TriggerCiv];
+
+	private _triggerEnemy = _logicRoot getVariable [
+		format ["competition_trigger_%1", competition_var_name_TriggerEnemy], objNull
+	];
+	if (isNull _triggerEnemy) then {
+		throw (format [
+			"The course root logic needs an %1 trigger.",
+			competition_var_name_TriggerEnemy
+		]);
+	};
 
 	[format ["Finished init for %1", _logicRoot]] call competition_fnc_log;
 };

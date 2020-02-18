@@ -28,9 +28,13 @@ private _stages = _logicRoot getVariable "competition_stages";
 private _junk = [];
 private _timeTotalStart = time;
 
-{
-	[_logicRoot, _x] call competition_fnc_KilledEHLoop
-} forEach [true, false];
+[_logicRoot, true] call competition_fnc_KilledEHLoop;
+private _triggerCiv = _logicRoot getVariable [
+	format ["competition_trigger_%1", competition_var_name_TriggerCiv], objNull
+];
+if !(isNull _triggerCiv) then {
+	[_logicRoot, false] call competition_fnc_KilledEHLoop;
+};
 
 {
 	_x setVariable [
@@ -39,13 +43,22 @@ private _timeTotalStart = time;
 	];
 } forEach _participants;
 
+private _participants_str = "";
+{
+	_participants_str = _participants_str + format [
+		"%1 (%2), ",
+		name _x,
+		[_x] call ace_common_fnc_getWeight
+	];
+} forEach _participants;
+
 private _isAborted = false;
 private _totalTime = 0;
 private _totalScore = 0;
 private _announcements = [
 	format [
-		"Competition announcement: %1 participated in %2 and did:",
-		_participants apply {name _x}, 
+		"Competition announcement: %1participated in %2 and did:",
+		_participants_str, 
 		_logicRoot getVariable "competition_name"
 	]
 ];

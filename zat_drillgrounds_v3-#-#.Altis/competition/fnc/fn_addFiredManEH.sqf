@@ -16,7 +16,6 @@ params ["_unit"];
 _unit addEventHandler ["FiredMan", {
 	params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
 	private _logicRoot = _unit getVariable "competition_logicRoot";
-	private _weaponsUsed = _logicRoot getVariable ["competition_weaponsUsed", []];
 	private _weapon = getText (
 		configFile >> 
 		"CfgWeapons" >> 
@@ -30,5 +29,8 @@ _unit addEventHandler ["FiredMan", {
 		"displayName"
 	);
 	_weaponMagString = format ["%1 from %2", _magazine, _weapon];
-	_logicRoot setVariable ["competition_weaponsUsed", _weaponMagString];
+	private _weaponsUsed = _logicRoot getVariable ["competition_weaponsUsed", []];
+	[format ["For course, %1: Adding weapon fired %2 to array %3", _logicRoot, _weaponMagString, _weaponsUsed]] call competition_fnc_log;
+	_weaponsUsed pushBackUnique _weaponMagString;
+	_logicRoot setVariable ["competition_weaponsUsed", _weaponsUsed];
 }]
