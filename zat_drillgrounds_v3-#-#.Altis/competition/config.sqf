@@ -23,5 +23,5 @@ if (isServer) then {
     competition_var_name_TriggerFinish = "finish";
     competition_var_name_TriggerEnemy = "enemies";
     competition_var_name_TriggerCiv = "civilians";
-    competition_debug = true;
+    competition_debug = false;
 };
