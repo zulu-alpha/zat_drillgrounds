@@ -16,9 +16,12 @@
 
 */
 
-params ["_logicRoot", "_stage", "_stageNumber", "_participants", "_codeTeardown", "_junk", "_isAborted"];
+params ["_logicRoot", "_stage", "_stageNumber", "_participants", "_stageCodeTeardown", "_junk", "_isAborted"];
 
-[] call _codeTeardown;
+[_logicRoot, _stage, _stageNumber, _participants] call _stageCodeTeardown;
+private _rootCodeTeardown = _logicRoot getVariable [competition_var_name_teardown, {}];
+[_logicRoot, _logicRoot, 0, _participants] call _rootCodeTeardown;
+
 _logicRoot setVariable ["competition_currStage", objNull, true];
 {deleteVehicle _x} forEach _junk;
 {	
