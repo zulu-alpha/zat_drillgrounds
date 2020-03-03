@@ -8,7 +8,7 @@ class EditorData
 	toggles=5;
 	class ItemIDProvider
 	{
-		nextID=19027;
+		nextID=19028;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1078;
+		nextID=1092;
 	};
 	class Camera
 	{
-		pos[]={26671.561,90.149139,24644.598};
-		dir[]={-0.41742009,-0.63749462,-0.64767671};
-		up[]={-0.34537748,0.77041614,-0.535887};
-		aside[]={-0.84061605,-1.9132858e-007,0.54176849};
+		pos[]={26687.35,49.279865,24595.988};
+		dir[]={-0.77342492,-0.61219144,0.16512078};
+		up[]={-0.59884179,0.79058427,0.12785581};
+		aside[]={0.20881787,1.1151424e-006,0.97807819};
 	};
 };
 binarizationWanted=0;
@@ -705,7 +705,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=4206;
+		items=4207;
 		class Item0
 		{
 			dataType="Marker";
@@ -10148,7 +10148,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24125.375,3.5421062,19008.25};
-				angles[]={-0,1.4323157,0};
+				angles[]={0,1.4323157,0};
 			};
 			side="Empty";
 			flags=4;
@@ -199959,7 +199959,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24129.625,3.7783246,19016.375};
-				angles[]={-0,3.1385345,0};
+				angles[]={0,3.1385345,0};
 			};
 			side="Empty";
 			flags=4;
@@ -200042,15 +200042,16 @@ class Mission
 		class Item4154
 		{
 			dataType="Trigger";
-			position[]={24138.5,3.1900001,19016.75};
+			position[]={24138.875,3.1900001,19009.25};
 			class Attributes
 			{
 				condition="call{this}";
-				sizeA=2;
-				sizeB=2;
+				sizeA=1.5;
+				sizeB=23;
 				sizeC=10;
 				repeatable=1;
 				activationBy="WEST";
+				isRectangle=1;
 			};
 			id=18919;
 			type="EmptyDetectorAreaR250";
@@ -200060,8 +200061,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={24139,3.1900001,19017.125};
-				angles[]={0,2.3665566,0};
+				position[]={24138.25,3.1900001,19009.25};
+				angles[]={-0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18920;
@@ -200084,8 +200085,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={24139.125,3.1900001,19016};
-				angles[]={0,5.3177543,0};
+				position[]={24139.375,3.1900001,19009};
+				angles[]={-0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18922;
@@ -200094,15 +200095,16 @@ class Mission
 		class Item4158
 		{
 			dataType="Trigger";
-			position[]={24148.5,3.1900001,19016.75};
+			position[]={24148.5,3.1900001,19009.25};
 			class Attributes
 			{
 				condition="call{this}";
-				sizeA=2;
-				sizeB=2;
+				sizeA=1.5;
+				sizeB=23;
 				sizeC=10;
 				repeatable=1;
 				activationBy="WEST";
+				isRectangle=1;
 			};
 			id=18926;
 			type="EmptyDetectorAreaR250";
@@ -200112,8 +200114,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={24149,3.1900001,19017.125};
-				angles[]={0,2.3665566,0};
+				position[]={24147.875,3.1900001,19009.625};
+				angles[]={-0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18927;
@@ -200134,15 +200136,16 @@ class Mission
 		class Item4161
 		{
 			dataType="Trigger";
-			position[]={24158.5,3.1900001,19016.75};
+			position[]={24158.5,3.1900001,19009.25};
 			class Attributes
 			{
 				condition="call{this}";
-				sizeA=2;
-				sizeB=2;
+				sizeA=1.5;
+				sizeB=23;
 				sizeC=10;
 				repeatable=1;
 				activationBy="WEST";
+				isRectangle=1;
 			};
 			id=18930;
 			type="EmptyDetectorAreaR250";
@@ -200152,8 +200155,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={24159,3.1900001,19017.125};
-				angles[]={0,2.3665566,0};
+				position[]={24157.625,3.1900001,19009.125};
+				angles[]={-0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18931;
@@ -200174,15 +200177,16 @@ class Mission
 		class Item4164
 		{
 			dataType="Trigger";
-			position[]={24168.5,3.1900001,19016.75};
+			position[]={24168.5,3.1900001,19009.25};
 			class Attributes
 			{
 				condition="call{this}";
-				sizeA=2;
-				sizeB=2;
+				sizeA=1.5;
+				sizeB=23;
 				sizeC=10;
 				repeatable=1;
 				activationBy="WEST";
+				isRectangle=1;
 			};
 			id=18933;
 			type="EmptyDetectorAreaR250";
@@ -200192,8 +200196,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={24169,3.1900001,19017.125};
-				angles[]={0,2.3665566,0};
+				position[]={24167.75,3.1900001,19009};
+				angles[]={-0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18934;
@@ -200214,15 +200218,16 @@ class Mission
 		class Item4167
 		{
 			dataType="Trigger";
-			position[]={24178.5,3.1900001,19016.75};
+			position[]={24178.5,3.1900001,19009.25};
 			class Attributes
 			{
 				condition="call{this}";
-				sizeA=2;
-				sizeB=2;
+				sizeA=1.5;
+				sizeB=23;
 				sizeC=10;
 				repeatable=1;
 				activationBy="WEST";
+				isRectangle=1;
 			};
 			id=18936;
 			type="EmptyDetectorAreaR250";
@@ -200232,8 +200237,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={24179,3.1900001,19017.125};
-				angles[]={0,2.3665566,0};
+				position[]={24177.875,3.1900001,19009.25};
+				angles[]={-0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18937;
@@ -200254,15 +200259,16 @@ class Mission
 		class Item4170
 		{
 			dataType="Trigger";
-			position[]={24188.5,3.1900001,19016.75};
+			position[]={24188.5,3.1900001,19009.25};
 			class Attributes
 			{
 				condition="call{this}";
-				sizeA=2;
-				sizeB=2;
+				sizeA=1.5;
+				sizeB=23;
 				sizeC=10;
 				repeatable=1;
 				activationBy="WEST";
+				isRectangle=1;
 			};
 			id=18939;
 			type="EmptyDetectorAreaR250";
@@ -200272,8 +200278,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={24189,3.1900001,19017.125};
-				angles[]={0,2.3665566,0};
+				position[]={24187.75,3.1900001,19009.25};
+				angles[]={-0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18940;
@@ -200294,15 +200300,16 @@ class Mission
 		class Item4173
 		{
 			dataType="Trigger";
-			position[]={24198.5,3.1900001,19016.75};
+			position[]={24198.5,3.1900001,19009.25};
 			class Attributes
 			{
 				condition="call{this}";
-				sizeA=2;
-				sizeB=2;
+				sizeA=1.5;
+				sizeB=23;
 				sizeC=10;
 				repeatable=1;
 				activationBy="WEST";
+				isRectangle=1;
 			};
 			id=18942;
 			type="EmptyDetectorAreaR250";
@@ -200312,8 +200319,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={24199,3.1900001,19017.125};
-				angles[]={0,2.3665566,0};
+				position[]={24197.625,3.1900001,19009.125};
+				angles[]={-0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18943;
@@ -200334,15 +200341,16 @@ class Mission
 		class Item4176
 		{
 			dataType="Trigger";
-			position[]={24208.5,3.1900001,19016.75};
+			position[]={24208.5,3.1900001,19009.25};
 			class Attributes
 			{
 				condition="call{this}";
-				sizeA=2;
-				sizeB=2;
+				sizeA=1.5;
+				sizeB=23;
 				sizeC=10;
 				repeatable=1;
 				activationBy="WEST";
+				isRectangle=1;
 			};
 			id=18945;
 			type="EmptyDetectorAreaR250";
@@ -200352,8 +200360,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={24209,3.1900001,19017.125};
-				angles[]={0,2.3665566,0};
+				position[]={24207.625,3.1900001,19009.125};
+				angles[]={-0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18946;
@@ -200374,15 +200382,16 @@ class Mission
 		class Item4179
 		{
 			dataType="Trigger";
-			position[]={24218.5,3.1900001,19016.75};
+			position[]={24218.5,3.1900001,19009.25};
 			class Attributes
 			{
 				condition="call{this}";
-				sizeA=2;
-				sizeB=2;
+				sizeA=1.5;
+				sizeB=23;
 				sizeC=10;
 				repeatable=1;
 				activationBy="WEST";
+				isRectangle=1;
 			};
 			id=18948;
 			type="EmptyDetectorAreaR250";
@@ -200392,8 +200401,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={24219,3.1900001,19017.125};
-				angles[]={0,2.3665566,0};
+				position[]={24217.625,3.1900001,19009.25};
+				angles[]={-0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18949;
@@ -200416,8 +200425,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={24149.094,3.1900001,19015.992};
-				angles[]={0,5.3177543,0};
+				position[]={24149,3.1900001,19009.5};
+				angles[]={-0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18951;
@@ -200428,8 +200437,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={24159.17,3.1900001,19016.035};
-				angles[]={0,5.3177543,0};
+				position[]={24159.25,3.1900001,19009.25};
+				angles[]={-0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18952;
@@ -200440,8 +200449,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={24169.221,3.1900001,19016.043};
-				angles[]={0,5.3177543,0};
+				position[]={24169.25,3.1900001,19009.125};
+				angles[]={-0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18953;
@@ -200452,8 +200461,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={24179.277,3.1900001,19015.973};
-				angles[]={0,5.3177543,0};
+				position[]={24179.125,3.1900001,19009.125};
+				angles[]={-0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18954;
@@ -200464,8 +200473,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={24189.273,3.1900001,19015.869};
-				angles[]={0,5.3177543,0};
+				position[]={24189.25,3.1900001,19009.25};
+				angles[]={-0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18955;
@@ -200476,8 +200485,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={24199.367,3.1900001,19015.92};
-				angles[]={0,5.3177543,0};
+				position[]={24199.25,3.1900001,19009.125};
+				angles[]={-0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18956;
@@ -200488,8 +200497,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={24209.217,3.1900001,19016.006};
-				angles[]={0,5.3177543,0};
+				position[]={24209.5,3.1900001,19009};
+				angles[]={-0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18957;
@@ -200500,8 +200509,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={24219.254,3.1900001,19015.904};
-				angles[]={0,5.3177543,0};
+				position[]={24219.5,3.1900001,19009.25};
+				angles[]={-0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18958;
@@ -201583,6 +201592,48 @@ class Mission
 			};
 			id=19013;
 			type="Land_Cliff_stone_small_F";
+		};
+		class Item4206
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={23969.32,4.1679344,17332.051};
+				angles[]={6.247201,6.2032142,0.012000273};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init="call{nul = [this] execVM ""training\spectate_cone_options.sqf"";}";
+			};
+			id=19027;
+			type="RoadCone_L_F";
+			atlOffset=-0.00014424324;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
