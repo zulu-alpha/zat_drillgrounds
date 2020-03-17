@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1092;
+		nextID=1106;
 	};
 	class Camera
 	{
-		pos[]={26687.35,49.279865,24595.988};
-		dir[]={-0.77342492,-0.61219144,0.16512078};
-		up[]={-0.59884179,0.79058427,0.12785581};
-		aside[]={0.20881787,1.1151424e-006,0.97807819};
+		pos[]={25340.293,1144.1139,19727.193};
+		dir[]={-0.064790525,-0.4991073,0.86411685};
+		up[]={-0.037317887,0.86653757,0.4977107};
+		aside[]={0.99720371,3.7864083e-008,0.074769065};
 	};
 };
 binarizationWanted=0;
@@ -682,7 +682,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="zat_Drill Grounds_v3.16.0";
+		briefingName="zat_Drill Grounds_v3.16.1";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
@@ -200062,7 +200062,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24138.25,3.1900001,19009.25};
-				angles[]={-0,2.3665566,0};
+				angles[]={0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18920;
@@ -200086,7 +200086,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24139.375,3.1900001,19009};
-				angles[]={-0,5.3177543,0};
+				angles[]={0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18922;
@@ -200115,7 +200115,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24147.875,3.1900001,19009.625};
-				angles[]={-0,2.3665566,0};
+				angles[]={0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18927;
@@ -200156,7 +200156,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24157.625,3.1900001,19009.125};
-				angles[]={-0,2.3665566,0};
+				angles[]={0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18931;
@@ -200197,7 +200197,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24167.75,3.1900001,19009};
-				angles[]={-0,2.3665566,0};
+				angles[]={0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18934;
@@ -200238,7 +200238,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24177.875,3.1900001,19009.25};
-				angles[]={-0,2.3665566,0};
+				angles[]={0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18937;
@@ -200279,7 +200279,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24187.75,3.1900001,19009.25};
-				angles[]={-0,2.3665566,0};
+				angles[]={0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18940;
@@ -200320,7 +200320,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24197.625,3.1900001,19009.125};
-				angles[]={-0,2.3665566,0};
+				angles[]={0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18943;
@@ -200361,7 +200361,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24207.625,3.1900001,19009.125};
-				angles[]={-0,2.3665566,0};
+				angles[]={0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18946;
@@ -200402,7 +200402,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24217.625,3.1900001,19009.25};
-				angles[]={-0,2.3665566,0};
+				angles[]={0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18949;
@@ -200426,7 +200426,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24149,3.1900001,19009.5};
-				angles[]={-0,5.3177543,0};
+				angles[]={0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18951;
@@ -200438,7 +200438,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24159.25,3.1900001,19009.25};
-				angles[]={-0,5.3177543,0};
+				angles[]={0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18952;
@@ -200450,7 +200450,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24169.25,3.1900001,19009.125};
-				angles[]={-0,5.3177543,0};
+				angles[]={0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18953;
@@ -200462,7 +200462,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24179.125,3.1900001,19009.125};
-				angles[]={-0,5.3177543,0};
+				angles[]={0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18954;
@@ -200474,7 +200474,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24189.25,3.1900001,19009.25};
-				angles[]={-0,5.3177543,0};
+				angles[]={0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18955;
@@ -200486,7 +200486,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24199.25,3.1900001,19009.125};
-				angles[]={-0,5.3177543,0};
+				angles[]={0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18956;
@@ -200498,7 +200498,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24209.5,3.1900001,19009};
-				angles[]={-0,5.3177543,0};
+				angles[]={0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18957;
@@ -200510,7 +200510,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24219.5,3.1900001,19009.25};
-				angles[]={-0,5.3177543,0};
+				angles[]={0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18958;
@@ -201610,7 +201610,7 @@ class Mission
 			};
 			id=19027;
 			type="RoadCone_L_F";
-			atlOffset=-0.00014424324;
+			atlOffset=-0.00014400482;
 			class CustomAttributes
 			{
 				class Attribute0
