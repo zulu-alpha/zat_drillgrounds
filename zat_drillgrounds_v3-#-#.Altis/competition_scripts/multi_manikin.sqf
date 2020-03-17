@@ -49,8 +49,8 @@ waitUntil {(time > 1) and {!(isNull player)}};
 
 params ["_controller"];
 
-private _man_type = "O_G_Soldier_unarmed_F";
-private _man_side = east;
+private _man_type = "C_man_1";
+private _man_side = civilian;
 private _mat_types = [
 	"ShootingMat_01_Olive_F",
 	"ShootingMat_01_Khaki_F",
