@@ -12,7 +12,10 @@
 */
 
 [] spawn {
-	missionNamespace setVariable ["knowledge_isActive", true, true];
+
+	if (isNil "Knowledge_do_los") then {
+		Knowledge_do_los = true;
+	};
 
 	private ["_eh_index", "_drawJobs"];
 	if (hasInterface) then {
@@ -20,6 +23,7 @@
 		Knowledge_lastPosError = [false] call CBA_fnc_createNamespace;
 		_drawJobs = [[], []];
 		_eh_index = addMissionEventHandler ["Draw3D", {call knowledge_fnc_draw}];
+		
 	};
 
 	while {sleep 0.5; knowledge_isActive} do {
@@ -52,7 +56,7 @@
 						"_target_position"
 					];
 					if (
-							((leader _group) distance _x) < 150 and
+							Knowledge_do_los and {(leader _group) distance _x < 150} and
 							{{alive _x} count (units _group) > 0}
 						) then {
 						(_drawJobs select 1) pushBackUnique _group;
