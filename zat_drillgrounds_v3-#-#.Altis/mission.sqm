@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1148;
+		nextID=1162;
 	};
 	class Camera
 	{
-		pos[]={26791.281,33.736023,24633.242};
-		dir[]={-0.8971926,-0.36152416,-0.25379941};
-		up[]={-0.34789589,0.93234903,-0.098412879};
-		aside[]={-0.27221078,5.0218659e-007,0.96227682};
+		pos[]={26818.479,62.598167,24599.672};
+		dir[]={-0.82745278,-0.48231566,0.28768694};
+		up[]={-0.45558196,0.87598354,0.15839623};
+		aside[]={0.32840782,4.0046871e-007,0.94457734};
 	};
 };
 binarizationWanted=0;
@@ -682,7 +682,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="zat_Drill Grounds_v3.16.3";
+		briefingName="zat_Drill Grounds_v3.17.0";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;

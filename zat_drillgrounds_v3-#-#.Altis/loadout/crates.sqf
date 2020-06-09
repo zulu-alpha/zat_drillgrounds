@@ -73,12 +73,14 @@ switch (_loadout) do {
 		_crate addItemCargoGlobal ["hlc_muzzle_556NATO_KAC", 10];
 
 	};
-	
+
 	case "surveillance": {
 
 		_crate addBackpackCargoGlobal ["B_UAV_01_backpack_F", 1];
 		_crate addItemCargoGlobal ["ACE_UAVBattery", 5];
-		
+		_crate addItemCargoGlobal ["ACE_HuntIR_monitor", 2];
+		_crate addMagazineCargoGlobal ["ACE_HuntIR_M203", 8];
+
 	};
 
 	case "explosives": {
@@ -294,9 +296,8 @@ switch (_loadout) do {
 		_crate addItemCargoGlobal ["ACE_fieldDressing", 45];
 		_crate addItemCargoGlobal ["ACE_epinephrine", 9];
 		_crate addItemCargoGlobal ["ACE_morphine", 9];
-		_crate addItemCargoGlobal ["ACE_tourniquet", 9];
+		_crate addItemCargoGlobal ["ACE_tourniquet", 36];
 		_crate addItemCargoGlobal ["ACE_splint", 9];
-		_crate addItemCargoGlobal ["ACE_salineIV_500", 9];
 
 		// Navigation\tracking\communication
 
@@ -368,8 +369,6 @@ switch (_loadout) do {
 		_crate addItemCargoGlobal [(["CUP_NVG_GPNVG_tan", "CUP_NVG_GPNVG_black", "CUP_NVG_GPNVG_green"] select _index), 10];
 		_crate addItemCargoGlobal ["Binocular", 4];
 		_crate addItemCargoGlobal ["ACE_Vector", 6];
-
-		// Medical
 
 
 		// Navigation\tracking\communication
@@ -474,9 +473,8 @@ switch (_loadout) do {
 		_crate addItemCargoGlobal ["ACE_fieldDressing", 50];
 		_crate addItemCargoGlobal ["ACE_epinephrine", 10];
 		_crate addItemCargoGlobal ["ACE_morphine", 10];
-		_crate addItemCargoGlobal ["ACE_tourniquet", 10];
+		_crate addItemCargoGlobal ["ACE_tourniquet", 40];
 		_crate addItemCargoGlobal ["ACE_splint", 10];
-		_crate addItemCargoGlobal ["ACE_salineIV_500", 10];
 
 		// Navigation\tracking\communication
 
@@ -716,7 +714,7 @@ switch (_loadout) do {
 		_crate addItemCargoGlobal ["ACE_adenosine", 50];
 		_crate addItemCargoGlobal ["ACE_epinephrine", 50];
 		_crate addItemCargoGlobal ["ACE_morphine", 50];
-		_crate addItemCargoGlobal ["ACE_tourniquet", 25];
+		_crate addItemCargoGlobal ["ACE_tourniquet", 50];
 		_crate addItemCargoGlobal ["ACE_salineIV_250", 20];
 		_crate addItemCargoGlobal ["ACE_salineIV_500", 20];
 		_crate addItemCargoGlobal ["ACE_salineIV", 35];
