@@ -32,6 +32,7 @@ if !(_live) then {
 
 // Skill setting
 _target_object setSkill _skill;
+_target_object setVariable ["dangerAIEnabled",false];
 
 // Unit Pos
 _unitPos_mapping_index = shoothouse_var_stance_mapping find _stance;
