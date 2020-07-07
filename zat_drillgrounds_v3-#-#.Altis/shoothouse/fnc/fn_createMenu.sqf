@@ -49,7 +49,10 @@ _action_trash set [count _action_trash, _action];
 
 _action = _interface addAction [
     ("<t color=""#FFBF00"">" + ("Spawn targets") + "</t>"),
-    {[(_this select 3) select 0, _this select 1] remoteExec ["shootHouse_fnc_requestSpawnGroups", 2];},
+    {
+        {_x setDamage 0} forEach synchronizedObjects ((_this select 3) select 0);
+        [(_this select 3) select 0, _this select 1] remoteExec ["shootHouse_fnc_requestSpawnGroups", 2];
+    },
     [_course],
     1.5,
     true,
