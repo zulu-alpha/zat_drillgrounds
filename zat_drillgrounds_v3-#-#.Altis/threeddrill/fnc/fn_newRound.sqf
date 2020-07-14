@@ -12,6 +12,8 @@
 
 */
 
+#define IS_ACTIVE (_refObject getVariable ["round_active", false])
+
 if !(isServer) exitWith {};
 
 _this spawn {
@@ -35,7 +37,14 @@ _this spawn {
 	} forEach (_participants + _observers);
 	private _startTime = time;
 
-	waitUntil {sleep 0.1; [_participants, _group] call threeddrill_fnc_isAllCursorsOnTargets};
+	waitUntil {
+		sleep 0.1;
+		[_participants, _group] call threeddrill_fnc_isAllCursorsOnTargets or
+		!IS_ACTIVE
+	};
+	if !IS_ACTIVE exitWith {
+		{deleteVehicle _x} forEach (units _group);
+	};
 	{
 		["All Seen!"] remoteExec ["threeddrill_fnc_hint", _x];
 	} forEach (_participants + _observers);
@@ -45,10 +54,16 @@ _this spawn {
 	} forEach (units _group);
 
 	waitUntil {
-		{
+		sleep 0.1;
+		({
 			private _isUnconscious = _x getVariable ["ace_isunconscious", false];
-			!(isNull _x) and {alive _x} and {canFire _x} and {!(_isUnconscious)}
-		} count (units _group) == 0
+			!(isNull _x) and {alive _x} and {canFire _x} and
+			{!(_isUnconscious)}
+		} count (units _group) == 0) or
+		!IS_ACTIVE
+	};
+	if !IS_ACTIVE exitWith {
+		{deleteVehicle _x} forEach (units _group);
 	};
 
 	private _timeElapsed = time - _startTime;

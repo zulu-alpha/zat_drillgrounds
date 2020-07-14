@@ -48,6 +48,15 @@ _control_object addAction [
 ];
 
 _control_object addAction [
+    "List participants",
+    {
+		params ["_target", "_caller", "_actionId", "_arguments"];
+		private _participants = _target getVariable ["participants", []];
+        hint (str _participants);
+    }
+];
+
+_control_object addAction [
     "Become observer",
     {
 		params ["_target", "_caller", "_actionId", "_arguments"];
@@ -82,6 +91,7 @@ _control_object addAction [
     "New round",
     {
 		params ["_target", "_caller", "_actionId", "_arguments"];
+        _target setVariable ["round_active", true, true];
         [_target] remoteExec ["threeddrill_fnc_newRound", 0, false];
     },
     nil,
@@ -90,4 +100,19 @@ _control_object addAction [
     true,
     "",
     "!(_target getVariable ['roundInProgress', false])"
+];
+
+_control_object addAction [
+    "Cancel round",
+    {
+		params ["_target", "_caller", "_actionId", "_arguments"];
+        _target setVariable ["round_active", false, true];
+        hint "Round cancelled!";
+    },
+    nil,
+    1.5,
+    true,
+    true,
+    "",
+    "(_target getVariable ['round_active', false])"
 ];
