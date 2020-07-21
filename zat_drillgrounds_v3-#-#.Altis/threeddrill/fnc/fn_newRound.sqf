@@ -12,7 +12,7 @@
 
 */
 
-#define IS_ACTIVE (_refObject getVariable ["round_active", false])
+#define IS_ACTIVE (_refObject getVariable ["roundInProgress", false])
 
 if !(isServer) exitWith {};
 
@@ -44,6 +44,7 @@ _this spawn {
 	};
 	if !IS_ACTIVE exitWith {
 		{deleteVehicle _x} forEach (units _group);
+		_refObject setVariable ["roundInProgress", false, true];
 	};
 	{
 		["All Seen!"] remoteExec ["threeddrill_fnc_hint", _x];
@@ -64,6 +65,7 @@ _this spawn {
 	};
 	if !IS_ACTIVE exitWith {
 		{deleteVehicle _x} forEach (units _group);
+		_refObject setVariable ["roundInProgress", false, true];
 	};
 
 	private _timeElapsed = time - _startTime;

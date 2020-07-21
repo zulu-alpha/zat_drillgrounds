@@ -91,7 +91,7 @@ _control_object addAction [
     "New round",
     {
 		params ["_target", "_caller", "_actionId", "_arguments"];
-        _target setVariable ["round_active", true, true];
+        _target setVariable ["roundInProgress", true, true];
         [_target] remoteExec ["threeddrill_fnc_newRound", 0, false];
     },
     nil,
@@ -106,7 +106,7 @@ _control_object addAction [
     "Cancel round",
     {
 		params ["_target", "_caller", "_actionId", "_arguments"];
-        _target setVariable ["round_active", false, true];
+        _target setVariable ["roundInProgress", false, true];
         hint "Round cancelled!";
     },
     nil,
@@ -114,5 +114,5 @@ _control_object addAction [
     true,
     true,
     "",
-    "(_target getVariable ['round_active', false])"
+    "(_target getVariable ['roundInProgress', false])"
 ];
