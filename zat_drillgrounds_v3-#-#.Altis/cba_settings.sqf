@@ -98,7 +98,7 @@ force ace_cargo_enable = true;
 force ace_cargo_loadTimeCoefficient = 5;
 force ace_cargo_paradropTimeCoefficent = 2.5;
 force ace_rearm_distance = 20;
-force ace_rearm_level = 2;
+force ace_rearm_level = 1;
 force ace_rearm_supply = 0;
 force ace_refuel_hoseLength = 12;
 force ace_refuel_rate = 1;
@@ -328,7 +328,7 @@ ace_weaponselect_displayText = true;
 force ace_weather_enabled = true;
 ace_weather_showCheckAirTemperature = true;
 force ace_weather_updateInterval = 60;
-force ace_weather_windSimulation = false;
+force ace_weather_windSimulation = true;
 
 // ACE Wind Deflection
 force ace_winddeflection_enabled = true;
@@ -472,3 +472,6 @@ ZAM_showNames_ranks = false;
 ZAM_showNames_rucks = true;
 zam_showNames_toggle = false;
 force ZAM_showNames_voice = true;
+
+// CFP
+cfp_autoEquipNVG = false;
