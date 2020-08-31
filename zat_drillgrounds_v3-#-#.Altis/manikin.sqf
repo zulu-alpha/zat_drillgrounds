@@ -100,6 +100,7 @@ private _manikin_create = {
 				_blood_pressure_high,
 				_blood_pressure_low,
 				_blood_pressure_simple,
+				_manikin getVariable ["ace_medical_pain", 0.0],
 				_manikin getVariable ["ace_medical_bloodvolume", 6.0],
 				[_manikin] call ace_medical_status_fnc_getBloodLoss,
 				[_manikin] call ace_medical_status_fnc_getCardiacOutput,
@@ -163,6 +164,37 @@ private _manikin_add_random_wound = {
 
 };
 
+private _manikin_add_pain = {
+
+	/*
+		Increment the pain by 20% unless 100%
+	*/
+
+	params ["_target", "_caller", "_actionId", "_arguments"];
+	private _manikin = _target getVariable ["med_dummy", ObjNull];
+	private _start_pain = _manikin getVariable ["ace_medical_pain", 0];
+	private _new_pain = _start_pain + 0.2;
+	private _set_pain = _new_pain min 1;
+
+	_manikin setVariable ["ace_medical_pain", _set_pain, true];
+
+};
+
+private _manikin_unconcious = {
+
+	/*
+		Make the manikin unconcious in such a way that they stay so but can be brought 
+		back up.
+	*/
+
+	params ["_target", "_caller", "_actionId", "_arguments"];
+	private _manikin = _target getVariable ["med_dummy", ObjNull];
+
+	_manikin setVariable ["ace_medical_bloodvolume", 5.0, true];
+	[_manikin, true, 1, true] call ace_medical_fnc_setUnconscious;
+
+};
+
 private _manikin_stop_monitor = {
 
 	/*
@@ -189,17 +221,18 @@ private _manikin_start_monitor = {
 		<br/>Is concious: <t color='#ffff00'>%3</t>
 		<br/>Heart rate: <t color='#ffff00'>%4</t>
 		<br/>Blood pressure: <t color='#ffff00'>%5</t>
+		<br/>Pain: <t color='#ffff00'>%6%1</t>
 		<br/>
-		<br/>Blood volume: <t color='#ffff00'>%6 L</t>
-		<br/>Blood loss rate: <t color='#ffff00'>%7 L/min</t>
-		<br/>Cardiac (Heart) output: <t color='#ffff00'>%8 L/min</t>
-		<br/>1/4 Cardiac output: <t color='#ffff00'>%9 L/min</t>
-		<br/>In Cardiac arrest: <t color='#ffff00'>%10</t>
-		<br/>Cardiac arrest time left: <t color='#ffff00'>%11s</t>
+		<br/>Blood volume: <t color='#ffff00'>%7 L</t>
+		<br/>Blood loss rate: <t color='#ffff00'>%8 L/min</t>
+		<br/>Cardiac (Heart) output: <t color='#ffff00'>%9 L/min</t>
+		<br/>1/4 Cardiac output: <t color='#ffff00'>%10 L/min</t>
+		<br/>In Cardiac arrest: <t color='#ffff00'>%11</t>
+		<br/>Cardiac arrest time left: <t color='#ffff00'>%12s</t>
 		<br/>
-		<br/>Effective morphine shots: <t color='#ffff00'>%12</t>
-		<br/>Effective epinephrine shots: <t color='#ffff00'>%13</t>
-		<br/>Effective adenosine shots: <t color='#ffff00'>%14</t>
+		<br/>Effective morphine shots: <t color='#ffff00'>%13</t>
+		<br/>Effective epinephrine shots: <t color='#ffff00'>%14</t>
+		<br/>Effective adenosine shots: <t color='#ffff00'>%15</t>
 		";
 
 	_caller setVariable ["manikin_monitoringMat", _target, false];
@@ -218,6 +251,7 @@ private _manikin_start_monitor = {
 				"_bpHigh",
 				"_bpLow",
 				"_bpSimple",
+				"_pain",
 				"_bloodVolume",
 				"_bloodLoss",
 				"_cardiacOutput",
@@ -234,6 +268,7 @@ private _manikin_start_monitor = {
 				!(_isUnconcious),
 				format ["%1 b/min (%2)", _heartRate, _heartRateSimple],
 				format ["%1/%2 mmHg (%3)", _bpHigh, _bpLow, _bpSimple],
+				_pain * 100,
 				_bloodVolume,
 				_bloodLoss * 60,
 				_cardiacOutput * 60,
@@ -251,8 +286,29 @@ private _manikin_start_monitor = {
 
 };
 
+private _set_blood_volume = {
+
+	/*
+		Set the blood volume to the given amount
+	*/
+
+	params ["_target", "_caller", "_actionId", "_arguments"];
+	private _manikin = _target getVariable ["med_dummy", ObjNull];
+
+	_manikin setVariable ["ace_medical_bloodvolume", _arguments, true];
+
+};
+
+
 _controller addaction ["Spawn manikin", _manikin_create, [_mat, _model], 1.5, true, true, "", "isNull (_target getVariable ['med_dummy', ObjNull])"];
 _controller addaction ["Delete manikin", _manikin_delete, nil , 1.5, true, true, "", "!(isNull (_target getVariable ['med_dummy', ObjNull]))"];
 _controller addaction ["Add random wound", _manikin_add_random_wound, nil , 1.5, true, true, "", "!(isNull (_target getVariable ['med_dummy', ObjNull])) and {local (_target getVariable ['med_dummy', ObjNull])}"];
+_controller addaction ["Add 20% pain", _manikin_add_pain, nil , 1.5, true, true, "", "!(isNull (_target getVariable ['med_dummy', ObjNull])) and {local (_target getVariable ['med_dummy', ObjNull])}"];
+_controller addaction ["Make unconcious", _manikin_unconcious, nil , 1.5, true, true, "", "!(isNull (_target getVariable ['med_dummy', ObjNull])) and {local (_target getVariable ['med_dummy', ObjNull])}"];
 _controller addaction ["Monitor mat's manikins", _manikin_start_monitor, nil, 1.5, true, true, "", "(_this getVariable ['manikin_monitoringMat', objNull]) != _target"];
 _controller addaction ["Stop monitoring any mat", _manikin_stop_monitor, nil, 1.5, true, true, "", "(_this getVariable ['manikin_monitoringMat', objNull]) != objNull"];
+_controller addaction ["Set blood volume to full", _set_blood_volume, 6.0 , 1.5, true, true, "", "!(isNull (_target getVariable ['med_dummy', ObjNull])) and {local (_target getVariable ['med_dummy', ObjNull])}"];
+_controller addaction ["Set blood volume to 'Lost some blood'", _set_blood_volume, 5.9 , 1.5, true, true, "", "!(isNull (_target getVariable ['med_dummy', ObjNull])) and {local (_target getVariable ['med_dummy', ObjNull])}"];
+_controller addaction ["Set blood volume to 'Lost a lot of blood'", _set_blood_volume, 5.0 , 1.5, true, true, "", "!(isNull (_target getVariable ['med_dummy', ObjNull])) and {local (_target getVariable ['med_dummy', ObjNull])}"];
+_controller addaction ["Set blood volume to 'Lost a large amount of blood'", _set_blood_volume, 4.1 , 1.5, true, true, "", "!(isNull (_target getVariable ['med_dummy', ObjNull])) and {local (_target getVariable ['med_dummy', ObjNull])}"];
+_controller addaction ["Set blood volume to 'Lost a fatal amount of blood'", _set_blood_volume, 3.5 , 1.5, true, true, "", "!(isNull (_target getVariable ['med_dummy', ObjNull])) and {local (_target getVariable ['med_dummy', ObjNull])}"];
