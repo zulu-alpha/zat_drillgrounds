@@ -8,7 +8,7 @@ class EditorData
 	toggles=1029;
 	class ItemIDProvider
 	{
-		nextID=21288;
+		nextID=21290;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1330;
+		nextID=1344;
 	};
 	class Camera
 	{
-		pos[]={24028.553,31.083359,17344.877};
-		dir[]={-0.76672965,-0.30342123,0.56595194};
-		up[]={-0.2443237,0.95276266,0.18034583};
-		aside[]={0.59395206,-2.0561274e-006,0.80465239};
+		pos[]={26796.416,44.973343,24625.498};
+		dir[]={-0.67385763,-0.64899081,0.35321021};
+		up[]={-0.57481968,0.76078761,0.30129737};
+		aside[]={0.4642562,-2.3754546e-007,0.8857162};
 	};
 };
 binarizationWanted=0;
@@ -696,7 +696,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="zat_Drill Grounds_v3.18.0";
+		briefingName="zat_Drill Grounds_v3.18.1";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
@@ -180439,7 +180439,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
@@ -180716,6 +180716,67 @@ class Mission
 							};
 						};
 						nAttributes=7;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26764.25,21.09227,24642.051};
+						angles[]={0,0.68623042,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{nul = [this, ""grunt"", ""Dragon'0""] call zamf_fnc_team;}";
+						description="B [XO/IO]@Dragon'0";
+						isPlayable=1;
+					};
+					id=21289;
+					type="B_Soldier_SL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male08ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
 					};
 				};
 			};
@@ -190836,7 +190897,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={23980.25,3.1900001,17565.75};
-				angles[]={-0,3.7469599,0};
+				angles[]={0,3.7469599,0};
 			};
 			name="competition_riflemanDrill_shoothouse_3";
 			init="call{nul = [this] call shootHouse_fnc_processObjects;" \n "this setVariable [""shoothouse_settings_target"", [true, 0.5, 0.5], true];}";
@@ -190867,7 +190928,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={23978.5,3.1900001,17563.25};
-				angles[]={-0,5.3177543,0};
+				angles[]={0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18505;
@@ -190879,7 +190940,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={23988.479,3.1900001,17565.506};
-				angles[]={-0,2.3665566,0};
+				angles[]={0,2.3665566,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""start""];" \n "}";
 			id=18506;
@@ -190891,7 +190952,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={23987,3.1900001,17567.75};
-				angles[]={-0,5.3177543,0};
+				angles[]={0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_setup"", {" \n "[competition_riflemanDrill_shoothouse_3, competition_riflemanDrill_shoothouse_3] call shootHouse_fnc_requestSpawnGroups;" \n "}];" \n "" \n "this setVariable [""competition_teardown"", {" \n "[competition_riflemanDrill_shoothouse_3, competition_riflemanDrill_shoothouse_3] call shootHouse_fnc_requestDeleteGroups;" \n "}];}";
 			id=18507;
@@ -192827,7 +192888,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={23838,3.1900001,17370.5};
-				angles[]={-0,3.7469599,0};
+				angles[]={0,3.7469599,0};
 			};
 			name="competition_riflemanDrill_shoothouse_6";
 			init="call{nul = [this] call shootHouse_fnc_processObjects;" \n "this setVariable [""shoothouse_settings_target"", [true, 0.5, 0.5], true];}";
@@ -192838,7 +192899,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={23845.5,3.5232818,17366.25};
-			angle=5.3177552;
+			angle=5.3177547;
 			class Attributes
 			{
 				condition="call{count thisList == 0}";
@@ -192859,7 +192920,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={23836.5,3.1900001,17368.25};
-				angles[]={-0,5.3177543,0};
+				angles[]={0,5.3177543,0};
 			};
 			init="call{this setVariable [""competition_trigger_role"", ""finish""];" \n "}";
 			id=18826;
@@ -193102,7 +193163,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={24536.836,3.1899981,19223.291};
-			angle=-3.9181604;
+			angle=-3.9181602;
 			class Attributes
 			{
 				condition="call{this}";
@@ -197404,7 +197465,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={23987,4.0796914,17559.75};
-				angles[]={-0,5.3045268,0};
+				angles[]={0,5.3045268,0};
 			};
 			side="Empty";
 			flags=4;
@@ -197911,7 +197972,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={23844.75,4.2356033,17366.25};
-				angles[]={-0,5.3045268,6.2818937};
+				angles[]={0,5.3045268,6.2818937};
 			};
 			side="Empty";
 			flags=4;
