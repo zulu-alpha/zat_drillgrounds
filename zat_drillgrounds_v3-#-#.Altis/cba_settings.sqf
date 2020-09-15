@@ -310,9 +310,9 @@ force ace_vehicles_hideEjectAction = true;
 ace_vehicles_keepEngineRunning = false;
 
 // ACE View Distance Limiter
-ace_viewdistance_enabled = true;
-ace_viewdistance_limitViewDistance = 12000;
-ace_viewdistance_objectViewDistanceCoeff = 0;
+force ace_viewdistance_enabled = true;
+force ace_viewdistance_limitViewDistance = 12000;
+ace_viewdistance_objectViewDistanceCoeff = 4;
 ace_viewdistance_viewDistanceAirVehicle = 0;
 ace_viewdistance_viewDistanceLandVehicle = 0;
 ace_viewdistance_viewDistanceOnFoot = 0;
@@ -325,10 +325,10 @@ ace_reload_showCheckAmmoSelf = false;
 ace_weaponselect_displayText = true;
 
 // ACE Weather
-force ace_weather_enabled = true;
+force ace_weather_enabled = false;  // Modified
 ace_weather_showCheckAirTemperature = true;
 force ace_weather_updateInterval = 60;
-force ace_weather_windSimulation = true;
+force ace_weather_windSimulation = false;  // Modified
 
 // ACE Wind Deflection
 force ace_winddeflection_enabled = true;
@@ -449,15 +449,15 @@ force grad_trenches_functions_allowLongEnvelope = true;
 force grad_trenches_functions_allowShortEnvelope = true;
 force grad_trenches_functions_allowSmallEnvelope = true;
 force grad_trenches_functions_allowVehicleEnvelope = true;
-force grad_trenches_functions_bigEnvelopeDigTime = 40;
+force grad_trenches_functions_bigEnvelopeDigTime = 80;
 force grad_trenches_functions_buildFatigueFactor = 1;
 force grad_trenches_functions_camouflageRequireEntrenchmentTool = true;
-force grad_trenches_functions_giantEnvelopeDigTime = 90;
-force grad_trenches_functions_LongEnvelopeDigTime = 100;
-force grad_trenches_functions_shortEnvelopeDigTime = 20;
-force grad_trenches_functions_smallEnvelopeDigTime = 30;
+force grad_trenches_functions_giantEnvelopeDigTime = 180;
+force grad_trenches_functions_LongEnvelopeDigTime = 200;
+force grad_trenches_functions_shortEnvelopeDigTime = 40;
+force grad_trenches_functions_smallEnvelopeDigTime = 60;
 force grad_trenches_functions_stopBuildingAtFatigueMax = true;
-force grad_trenches_functions_vehicleEnvelopeDigTime = 120;
+force grad_trenches_functions_vehicleEnvelopeDigTime = 240;
 
 // ZAM ShowNames
 zam_showNames_enabled = true;
