@@ -8,7 +8,7 @@ class EditorData
 	toggles=1029;
 	class ItemIDProvider
 	{
-		nextID=21290;
+		nextID=21297;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1358;
+		nextID=1372;
 	};
 	class Camera
 	{
-		pos[]={24802.533,574.82715,20378.275};
-		dir[]={-0.44704196,-0.4235526,-0.78802246};
-		up[]={-0.20899999,0.9058553,-0.36841595};
-		aside[]={-0.86986482,3.7965947e-007,0.493476};
+		pos[]={24801.348,113.43742,18582.502};
+		dir[]={-0.69344789,-0.50583726,0.51332247};
+		up[]={-0.40657532,0.86261749,0.30096292};
+		aside[]={0.59503824,1.6903505e-007,0.80383033};
 	};
 };
 binarizationWanted=0;
@@ -152,13 +152,15 @@ addons[]=
 	"A3_Rocks_F_Exp_Cliff",
 	"CUP_CAStructures_E_HouseK",
 	"CUP_Buildings_Config",
-	"A3_Structures_F_EPC_Dominants_GhostHotel"
+	"A3_Structures_F_EPC_Dominants_GhostHotel",
+	"jbad_opxbuildings2",
+	"afghan_houses_c2"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=77;
+		items=79;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -658,6 +660,16 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item77
+		{
+			className="jbad_opxbuildings2";
+			name="jbad_opxbuildings2";
+		};
+		class Item78
+		{
+			className="afghan_houses_c2";
+			name="afghan_houses_c2";
+		};
 	};
 };
 randomSeed=2624700;
@@ -696,7 +708,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="zat_Drill Grounds_v3.18.2";
+		briefingName="zat_Drill Grounds_v3.19.0";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
@@ -719,7 +731,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=4152;
+		items=4156;
 		class Item0
 		{
 			dataType="Marker";
@@ -192899,7 +192911,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={23845.5,3.5232818,17366.25};
-			angle=5.3177543;
+			angle=5.3177538;
 			class Attributes
 			{
 				condition="call{count thisList == 0}";
@@ -193163,7 +193175,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={24536.836,3.1899981,19223.291};
-			angle=-3.91816;
+			angle=-3.9181597;
 			class Attributes
 			{
 				condition="call{this}";
@@ -197983,6 +197995,70 @@ class Mission
 			id=21287;
 			type="Land_BagBunker_Large_F";
 			atlOffset=0.15891242;
+		};
+		class Item4152
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={24484,3.1900001,18723.5};
+				angles[]={0,5.1887598,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=21290;
+			type="jbad_opx2_big_f";
+		};
+		class Item4153
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={24462,3.1900001,18686.25};
+				angles[]={0,0.48492178,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=21291;
+			type="jbad_opx2_policestation";
+		};
+		class Item4154
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={24443,3.1900001,18644};
+				angles[]={0,3.5658956,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=21293;
+			type="jbad_opx2_big_c";
+		};
+		class Item4155
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={24525.25,10.543903,18807.5};
+				angles[]={0,2.0714011,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=21296;
+			type="jbad_dum_istan4";
 		};
 	};
 	class Connections
