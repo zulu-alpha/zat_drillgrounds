@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1386;
+		nextID=1400;
 	};
 	class Camera
 	{
-		pos[]={24882.207,184.92545,18603.006};
-		dir[]={-0.736489,-0.49730596,0.45872509};
-		up[]={-0.42212436,0.86759388,0.26292232};
-		aside[]={0.52872795,-3.206078e-007,0.84887969};
+		pos[]={26776.047,27.129305,24627.891};
+		dir[]={-0.56802839,-0.41927627,0.70835328};
+		up[]={-0.26230717,0.90786797,0.32710645};
+		aside[]={0.78022218,7.7078585e-007,0.6256603};
 	};
 };
 binarizationWanted=0;
@@ -99642,7 +99642,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24496.4,5.0511169,18784.809};
-				angles[]={-0,5.3007746,0};
+				angles[]={0,5.3007746,0};
 			};
 			side="Empty";
 			flags=4;
@@ -99659,7 +99659,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24501.426,4.019073,18753.979};
-				angles[]={-0,0.58842421,0};
+				angles[]={0,0.58842421,0};
 			};
 			side="Empty";
 			flags=4;
@@ -100622,7 +100622,7 @@ class Mission
 					};
 					id=19068;
 					type="CUP_C_TK_Man_05_Coat";
-					atlOffset=3.4570694e-005;
+					atlOffset=3.4809113e-005;
 				};
 				class Item23
 				{
@@ -167220,7 +167220,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24519.662,3.440486,18777.105};
-				angles[]={-0,2.1591725,0};
+				angles[]={0,2.1591725,0};
 			};
 			side="Empty";
 			flags=4;
@@ -193198,7 +193198,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={24536.836,3.1899981,19223.291};
-			angle=-3.9181595;
+			angle=-3.918159;
 			class Attributes
 			{
 				condition="call{this}";
@@ -195444,7 +195444,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={24486.379,5.3652806,18767.725};
-				angles[]={-0,3.7399964,0};
+				angles[]={0,3.7399964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -198112,6 +198112,7 @@ class Mission
 			};
 			id=21313;
 			type="land_ffaa_casa_af_4";
+			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -198424,6 +198425,7 @@ class Mission
 			};
 			id=21331;
 			type="land_ffaa_casa_urbana_8";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -198463,6 +198465,7 @@ class Mission
 			};
 			id=21332;
 			type="Land_A_Villa_EP1";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
