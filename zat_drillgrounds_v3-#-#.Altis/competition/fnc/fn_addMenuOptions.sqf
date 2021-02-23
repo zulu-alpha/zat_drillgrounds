@@ -67,7 +67,9 @@ _controlObject addAction [
 
         [_caller] remoteExec ["competition_fnc_addHitEH", 0, false];
 
-        hint format ["You are now one of %1 participants!", count _participants];
+        _participant_names = [];
+        {_participant_names pushBackUnique (name _x)} forEach _participants;
+        hint format ["You are now one of %1 participants. All participants: %2", count _participants, _participant_names];
     },
     nil,
     1.5,
