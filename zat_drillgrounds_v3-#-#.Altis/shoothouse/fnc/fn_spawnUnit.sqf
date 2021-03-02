@@ -42,3 +42,11 @@ private _unitPos = if (_unitPos_mapping_index >= 0) then {
 		"AUTO"
 };
 _target_object setUnitPos _unitPos;
+
+// Handle static weapons
+private _statics = nearestObjects [_target_object, ["StaticWeapon"], 2];
+if (count _statics > 0) then {
+	private _static = _statics select 0;
+	_target_object assignAsGunner _static;
+	_target_object moveInGunner _static;
+};
