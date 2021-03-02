@@ -149,7 +149,15 @@ for "_stageNumber" from 1 to (count _stages) do {
 		] remoteExec ["competition_fnc_hint", _x];
 	} forEach _participants;
 
-	sleep competition_var_end_check_delay;  // Allow time for spawning to avoid premature finish trigger
+	// Allow time for spawning and wait for finish trigger to be false not true, to avoid
+	// premature finish trigger.
+	[format ["Waiting for stage %1 finish trigger to be false, trigger %2", _stageNumber, _triggerFinish]] call competition_fnc_log;
+	sleep competition_var_end_check_delay;
+	waitUntil {
+		sleep 0.1;
+		!(triggerActivated _triggerFinish) or 
+		!IS_ACTIVE
+	};
 	
 	// Waiting for stage to complete
 	[format ["Waiting for stage %1 to finish with trigger %2", _stageNumber, _triggerFinish]] call competition_fnc_log;
