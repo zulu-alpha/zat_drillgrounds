@@ -67,23 +67,13 @@ fnc_manikin_create = {
 
 	private _manikin = _manikin_group createUnit [_model, _pos, [], 0, "NONE"];
 
-	removeAllWeapons _manikin;
-	removeAllItems _manikin;
-	removeAllAssignedItems _manikin;
-	//removeUniform _manikin;
-	//removeVest _manikin;
-	//removeBackpack _manikin;
-	//removeHeadgear _manikin;
-	//removeGoggles _manikin;
-	(group _manikin) setVariable ["Vcm_Disable",true];
-
 	{
 		_manikin disableAI _x;
 	} forEach [
 		"TARGET",
 		"AUTOTARGET",
 		"MOVE",
-		"ANIM",
+		//"ANIM",
 		"TEAMSWITCH",
 		"FSM",
 		"WEAPONAIM",
@@ -98,6 +88,14 @@ fnc_manikin_create = {
 		"LIGHTS",
 		"RADIOPROTOCOL"
 	];
+
+	_manikin setSkill 0;
+	_manikin setVariable ["dangerAIEnabled",false, true];
+	_manikin setVariable ["acex_headless_blacklist", true, true];
+
+	removeAllWeapons _manikin;
+	removeAllItems _manikin;
+	removeAllAssignedItems _manikin;
 
 	_manikin setPosATL _pos;
 	_manikin setDir (getDir _manikin + (_manikin getRelDir _reference));
