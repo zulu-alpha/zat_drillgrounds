@@ -480,19 +480,21 @@ force ace_nightvision_noiseScaling = 0.5;
 force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
-ace_overheating_cookoffCoef = 1;
+force ace_overheating_cookoffCoef = 1;
+force ace_overheating_coolingCoef = 5;
 force ace_overheating_displayTextOnJam = true;
 force ace_overheating_enabled = true;
-ace_overheating_heatCoef = 1;
-ace_overheating_jamChanceCoef = 1;
+force ace_overheating_heatCoef = 1;
+force ace_overheating_jamChanceCoef = 1;
 force ace_overheating_overheatingDispersion = true;
-ace_overheating_overheatingRateOfFire = true;
+force ace_overheating_overheatingRateOfFire = true;
 ace_overheating_particleEffectsAndDispersionDistance = 3000;
 force ace_overheating_showParticleEffects = true;
 ace_overheating_showParticleEffectsForEveryone = true;
+force ace_overheating_suppressorCoef = 0.5;
 force ace_overheating_unJamFailChance = 0.1;
 force ace_overheating_unJamOnreload = false;
-ace_overheating_unJamOnSwapBarrel = false;
+force ace_overheating_unJamOnSwapBarrel = false;
 
 // ACE Pointing
 force ace_finger_enabled = true;
@@ -651,7 +653,7 @@ ace_reload_showCheckAmmoSelf = false;
 ace_weaponselect_displayText = true;
 
 // ACE Weather
-ace_weather_enabled = false;  // Modified
+force ace_weather_enabled = true;
 ace_weather_showCheckAirTemperature = true;
 force ace_weather_updateInterval = 60;
 ace_weather_windSimulation = false;  // Modified

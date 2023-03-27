@@ -6,15 +6,15 @@
 //#define zamf_world_params_world_def_view_distance 2000
 
 // Disable respawn by adjusting the tickets in the init.sqf
-respawnDelay = 5;
+respawnDelay = 3;
 
 // Force RotorLib
-forceRotorLibSimulation = 0;
+forceRotorLibSimulation = 1;
 
 // CfgFunctions
 class CfgFunctions
 {
-	#include "zamf\cfgfunctions.hpp"
+    #include "zamf\cfgfunctions.hpp"
 	#include "VVS\Functions.h"
 	#include "shoothouse\cfgfunctions.hpp"
     #include "ground_control\cfgfunctions.hpp"
@@ -40,24 +40,30 @@ class CfgRemoteExec
         mode = 2;
         // Ability to send jip messages: 0-disabled, 1-enabled (default)
         jip = 1;
-		class BIS_fnc_debugConsoleExec { allowedTargets = 0;jip = 1; };
-		class SpawnScript { allowedTargets = 0;jip = 1; };
-		class enableSimulationGlobal { allowedTargets = 0;jip = 1; };
+        // VCOMAI 3
+		class BIS_fnc_debugConsoleExec {allowedTargets = 0; jip = 1;};
+		class SpawnScript {allowedTargets = 0; jip = 1;};
+		class enableSimulationGlobal {allowedTargets = 0; jip = 1;};
         // ZAMF
         #include "zamf\cfgRemoteExec_functions.hpp"
-        /*your functions here*/
+        /* your functions here */
         // Wind
-        class wind_fnc_setWind { allowedTargets = 2 }
+        class wind_fnc_setWind { allowedTargets = 0 }
         // Knowledge
         class knowledge_fnc_mainLoop { allowedTargets = 0 };
         // Paintball mode
         #include "paintball\cfgRemoteExec_functions.hpp"
+
     };
 
     // List of script commands allowed to be sent from client via remoteExec
     class Commands
     {
         class hideObjectGlobal
+        {
+            allowedTargets = 0; // can target anyone
+        };
+        class setMarkerType
         {
             allowedTargets = 0; // can target anyone
         };
