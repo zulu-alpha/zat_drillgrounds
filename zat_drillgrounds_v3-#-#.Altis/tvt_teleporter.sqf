@@ -141,7 +141,7 @@ _fnc_teleport = {
 	if (hostile_is_near) exitWith {
 		hint format ["A member of side %1 is too close for you to use this teleporter!", _hostile_side];
 	};
-	_caller setPos (position _sink);
+	_caller setPosATL (getPosATL _sink);
 };
 _teleport_condition = 
 	"(side _this == _target getVariable ""tvt_teleporter_friendly_side"")";
