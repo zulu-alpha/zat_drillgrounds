@@ -84,7 +84,8 @@ if (_is_sink) then {
 		true,
 		true,
 		"",
-		_disable_condition
+		_disable_condition,
+		3
 	];
 };
 
@@ -106,7 +107,8 @@ if (_is_sink) then {
 		true,
 		true,
 		"",
-		_enable_condition
+		_enable_condition,
+		5
 	];
 };
 
@@ -156,7 +158,8 @@ _teleport_condition =
 		true,
 		true,
 		"",
-		_teleport_condition
+		_teleport_condition,
+		5
 	];
 } forEach tvt_teleporter_sinks;
 
