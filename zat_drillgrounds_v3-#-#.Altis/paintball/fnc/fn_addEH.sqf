@@ -26,5 +26,6 @@ private _eh_id = _participant addEventHandler ["HitPart", {
 	]) remoteExec ["paintball_fnc_hint", _target];
 	_target_hits = _target_hits + 1;
 	_target setVariable ["paintball_hits", _target_hits, true];
+	addCamShake [20, 2, 10];
 }];
 _participant setVariable ["paintball_eh_id", _eh_id, false];
