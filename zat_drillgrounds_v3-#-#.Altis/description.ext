@@ -74,6 +74,10 @@ class CfgRemoteExec
         {
             allowedTargets = 0; // can target anyone
         };
+        class addCamShake
+        {
+            allowedTargets = 0; // can target anyone
+        };
     };
 };
 
