@@ -6,6 +6,7 @@
 	@usage Call example (from unit init):
 	@usage nul = [this, "nato_guns"] call compile preprocessfilelinenumbers "loadout\crates.sqf";
 	@usage Or: nul = [this, "nato_guns", "refill"] call compile preprocessfilelinenumbers "loadout\crates.sqf";
+	@usage Or: nul = [this, "leave_kit"] call compile preprocessfilelinenumbers "loadout\crates.sqf"; to ignore kit.
 */
 
 private ["_crate","_loadout","_opt"];
@@ -13,23 +14,28 @@ private ["_crate","_loadout","_opt"];
 _crate = _this select 0;
 _loadout = _this select 1;
 _opt = if (count _this > 2) then {_this select 2} else {"none"};
-
-if (_opt == "refill") then {
-	_crate addaction [("<t color=""#FF9900"">" + ("Refill Crate") + "</t>"), "loadout\crates_refill.sqf", _loadout]
+if (_loadout != "leave_kit") then {
+	if (_opt == "refill") then {
+		_crate addaction [("<t color=""#FF9900"">" + ("Refill Crate") + "</t>"), "loadout\crates_refill.sqf", _loadout]
+	};
 };
 
 if !isServer exitWith {};
 
-clearweaponcargoGlobal _crate;
-clearmagazinecargoGlobal _crate;
-clearItemCargoGlobal _crate;
-clearBackpackCargoGlobal _crate;
+if (_loadout != "leave_kit") then {
+	clearweaponcargoGlobal _crate;
+	clearmagazinecargoGlobal _crate;
+	clearItemCargoGlobal _crate;
+	clearBackpackCargoGlobal _crate;
+};
 
 // Get the camo type needed
 private _index = call zamf_fnc_getClimate;
 
 
 switch (_loadout) do {
+
+	case "leave_kit": {};
 
 	case "equipment": {
 
@@ -150,7 +156,7 @@ switch (_loadout) do {
 
 		_crate addItemCargoGlobal ["optic_Holosight_blk_F", 3];
 		_crate addItemCargoGlobal ["optic_Arco_blk_F", 3];
-		_crate addItemCargoGlobal ["za_flashlight_led", 3];
+		_crate addItemCargoGlobal ["CUP_acc_ANPEQ_15_Flashlight_Black_L", 3];
 		
 		_crate addMagazineCargoGlobal ["hlc_30rnd_556x45_SOST", 20];
 		_crate addMagazineCargoGlobal ["hlc_30rnd_556x45_MDim", 6];
@@ -223,8 +229,8 @@ switch (_loadout) do {
 		_crate addItemCargoGlobal ["optic_Holosight_blk_F", 9];
 		_crate addItemCargoGlobal ["optic_Arco_blk_F", 9];
 
-		_crate addItemCargoGlobal ["za_flashlight_led", 7];
-		_crate addItemCargoGlobal ["za_flashlight_led", 2];
+		_crate addItemCargoGlobal ["CUP_acc_ANPEQ_15_Flashlight_Black_L", 7];
+		_crate addItemCargoGlobal ["CUP_acc_ANPEQ_15_Flashlight_Black_L", 2];
 
 		_crate addMagazineCargoGlobal ["hlc_30rnd_556x45_SOST", 66];
 		_crate addMagazineCargoGlobal ["hlc_30rnd_556x45_MDim", 16];
@@ -395,7 +401,7 @@ switch (_loadout) do {
 
 		_crate addItemCargoGlobal ["optic_Arco_blk_F", 10];
 		_crate addItemCargoGlobal ["optic_Holosight_blk_F", 10];
-		_crate addItemCargoGlobal ["za_flashlight_led", 10];
+		_crate addItemCargoGlobal ["CUP_acc_ANPEQ_15_Flashlight_Black_L", 10];
 
 		_crate addMagazineCargoGlobal ["hlc_30rnd_556x45_SOST", 60];
 		_crate addMagazineCargoGlobal ["hlc_30rnd_556x45_MDim", 14];
@@ -563,7 +569,7 @@ switch (_loadout) do {
 		_crate addItemCargoGlobal ["optic_Arco_blk_F", 3];
 		_crate addItemCargoGlobal ["optic_Holosight_blk_F", 3];
 
-		_crate addItemCargoGlobal ["za_flashlight_led", 3];
+		_crate addItemCargoGlobal ["CUP_acc_ANPEQ_15_Flashlight_Black_L", 3];
 		_crate addItemCargoGlobal ["acc_flashlight", 3];
 		//_crate addItemCargoGlobal ["ACE_acc_pointer_green", 3];
 
@@ -666,7 +672,7 @@ switch (_loadout) do {
 		_crate addItemCargoGlobal ["optic_Arco_blk_F", 5];
 		_crate addItemCargoGlobal ["optic_Holosight_blk_F", 5];
 		
-		_crate addItemCargoGlobal ["za_flashlight_led", 5];
+		_crate addItemCargoGlobal ["CUP_acc_ANPEQ_15_Flashlight_Black_L", 5];
 		_crate addItemCargoGlobal ["acc_flashlight", 5];
 		//_crate addItemCargoGlobal ["ACE_acc_pointer_green", 5];
 
