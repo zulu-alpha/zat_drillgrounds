@@ -1,0 +1,42 @@
+private["_worldName"];
+ _worldName = tolower(worldName);
+ ["ALiVE SETTING UP MAP: albasrah"] call ALIVE_fnc_dump;
+ ALIVE_Indexing_Blacklist = [];
+ ALIVE_airBuildingTypes = [];
+ ALIVE_militaryParkingBuildingTypes = [];
+ ALIVE_militarySupplyBuildingTypes = [];
+ ALIVE_militaryHQBuildingTypes = [];
+ ALIVE_militaryAirBuildingTypes = [];
+ ALIVE_civilianAirBuildingTypes = [];
+ ALiVE_HeliBuildingTypes = [];
+ ALIVE_militaryHeliBuildingTypes = [];
+ ALIVE_civilianHeliBuildingTypes = [];
+ ALIVE_militaryBuildingTypes = [];
+ ALIVE_civilianPopulationBuildingTypes = [];
+ ALIVE_civilianHQBuildingTypes = [];
+ ALIVE_civilianPowerBuildingTypes = [];
+ ALIVE_civilianCommsBuildingTypes = [];
+ ALIVE_civilianMarineBuildingTypes = [];
+ ALIVE_civilianRailBuildingTypes = [];
+ ALIVE_civilianFuelBuildingTypes = [];
+ ALIVE_civilianConstructionBuildingTypes = [];
+ ALIVE_civilianSettlementBuildingTypes = [];
+ if(tolower(_worldName) == "albasrah") then {
+ 
+ ALIVE_militaryBuildingTypes = ALIVE_militaryBuildingTypes + [];
+ALIVE_militaryParkingBuildingTypes = ALIVE_militaryParkingBuildingTypes + [];
+ALIVE_militarySupplyBuildingTypes = ALIVE_militarySupplyBuildingTypes + [];
+ALIVE_militaryHQBuildingTypes = ALIVE_militaryHQBuildingTypes + [];
+ALIVE_airBuildingTypes = ALIVE_airBuildingTypes + [];
+ALIVE_civilianAirBuildingTypes = ALIVE_civilianAirBuildingTypes + [];
+ALIVE_civilianPopulationBuildingTypes = ALIVE_civilianPopulationBuildingTypes + ["jbad_house","jbad_opx2_"];
+ALIVE_civilianHQBuildingTypes = ALIVE_civilianHQBuildingTypes + ["jbad_house","jbad_opx2_"];
+ALIVE_civilianSettlementBuildingTypes = ALIVE_civilianSettlementBuildingTypes + ["jbad_house","jbad_opx2_"];
+ALIVE_civilianPowerBuildingTypes = ALIVE_civilianPowerBuildingTypes + [];
+ALIVE_civilianCommsBuildingTypes = ALIVE_civilianCommsBuildingTypes + [];
+ALIVE_civilianMarineBuildingTypes = ALIVE_civilianMarineBuildingTypes + [];
+ALIVE_civilianRailBuildingTypes = ALIVE_civilianRailBuildingTypes + [];
+ALIVE_civilianFuelBuildingTypes = ALIVE_civilianFuelBuildingTypes + [];
+ALIVE_civilianConstructionBuildingTypes = ALIVE_civilianConstructionBuildingTypes + [];
+};
+
