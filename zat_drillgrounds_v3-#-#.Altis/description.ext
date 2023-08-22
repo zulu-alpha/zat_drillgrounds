@@ -35,7 +35,6 @@ class CfgFunctions
             class clearTable {};
         };
     };
-    #include "furniture\func.hpp"
 };
 
 // Enabling remote execution: https://community.bistudio.com/wiki/CfgRemoteExec
